@@ -252,13 +252,12 @@ header
 }
 
 .header-area {
-  background-image: url(../images/Barra-header.png);
+  /* background-image: url(../images/Barra-header.png); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
   height: 84px;
-  /* height: 110px; */
   top: 0;
   left: 0;
   right: 0;
@@ -267,10 +266,7 @@ header
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
-  /* filter: hue-rotate(169deg); */
-  /* filter: hue-rotate(218deg); */
-  /* opacity: 0.8; */
-  position: fixed;
+  /* position: fixed; */
 }
 
 .header-area .main-nav {
@@ -328,7 +324,7 @@ header
   /* font-weight: 400; */
   font-size: 18px;
   text-transform: capitalize;
-  color: #fff;
+  color: #727272;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -345,7 +341,7 @@ header
   opacity: 0.75;
 }
 .header-area .main-nav .nav li a.active {
-  color: #004a8d!important;
+  color: #0c34bf!important;
   /* opacity: 0.75; */
 }
 
@@ -1758,7 +1754,8 @@ body {
     right: 74px;
   }
   .header-area .main-nav .nav {
-    margin-right: 7rem;
+    margin-right: 2rem;
+    /* margin-right: 7rem; */
   }
   .mt-14 {
     top: 15rem!important;
@@ -1768,6 +1765,9 @@ body {
   }
   .w-25 {
     width: 31%!important;
+  }
+  .font-duda{
+    font-size: 2rem!important;
   }
 }
 
@@ -2259,7 +2259,7 @@ body {
   .color-slogan{
     font-size: 2rem;
   }
-  .font-conocenos{
+  .font-duda{
     font-size: 3rem;
   }
   .mt-valores{

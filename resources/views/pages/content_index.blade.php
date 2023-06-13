@@ -2,112 +2,37 @@
 @section('content')
 
 
-  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner mt5">
-      <div class="carousel-item active position-relative d-inline-block" data-bs-interval="4000">
-        <div class="position-absolute mt-14 pl-8">
-          <h1 class="text-white col-4 style-text d-none d-sm-block pri-texto Morganite-BoldItalic w900 font90 text-uppercase d-sm-none d-md-block">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile">spot1mobile.</span></h1>
-          <p class="mt-4 text-white h4 hmd col-6 w400 style-text d-none d-sm-block cont-texto d-sm-none d-md-block">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-
-          {{--  Responivo  --}}
-          <h1 class="text-white font90 Morganite-BoldItalic w900 col-11 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block  mt-20 text-center">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile p-0">spot1mobile.</h1>
-          <p class="mt-4 text-white h6 text-center col-10 w400 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block ">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-          {{--  Responsivo  --}}
-
-          <div class="d-flex flex-row mt-n2">
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('recarga')!!}" class="btn btn-primary btn-lg active br-radiu w700 style-text" role="button" aria-pressed="true">¡Contratar ahora!</a>
-            </div>
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete w700 style-text" role="button" aria-pressed="true">Ver paquetes</a>
-            </div>
-          </div>
-        </div>
-        
-        <img src="{{asset('images/Banner-principal.jpg')}}" class="d-block w-100 d-none d-sm-block d-sm-none d-md-block mt-6" alt="imagen1">
-        {{--  Responsivo  --}}
-        <img src="{{asset('images/Banner-respon.jpg')}}" class="d-block w-100 d-xl-none d-lg-none d-xl-block d-md-none d-lg-block " alt="imagen1">
-        {{--  Responsivo  --}}
+  <div class="container" style="background-color: #fff">
+    <div class="row">
+      <div class="col">
+        <img src="{{asset('images/person-principal.png')}}" class="d-block w-100 mt-7 ml-5" alt="imagen1">
       </div>
-
-      <div class="carousel-item" data-bs-interval="5000">
-        <div class="position-absolute mt-14 pl-8">
-          <h1 class="text-white col-4 style-text d-none d-sm-block pri-texto Morganite-BoldItalic w900 font90 text-uppercase d-sm-none d-md-block">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile">spot1mobile.</span></h1>
-          <p class="mt-4 text-white h4 hmd col-6 w400 style-text d-none d-sm-block cont-texto d-sm-none d-md-block">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-
-          {{--  Responsivo  --}}
-          <h1 class="text-white col-11 font90 Morganite-BoldItalic w900 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block  mt-20 text-center">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile p-0">spot1mobile.</h1>
-            <p class="mt-4 text-white h6 text-center col-10 w400 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block ">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-          {{--  Responsivo  --}}
-
-          <div class="d-flex flex-row mt-n2">
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('recarga')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete1 w700 style-text" role="button" aria-pressed="true">¡Contratar ahora!</a>
-            </div>
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete2 w700 style-text color-slogan2" role="button" aria-pressed="true">Ver paquetes</a>
-            </div>
+      <div class="col align-self-center mt-7">
+        <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a lo de hoy</h2>
+        <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a SPOTMOBILE</h2>
+        <h3 class="footer-heading h5 style-text w700 text-center color-secundario mt-4">Cámbiate y disfruta de los paquetes que tenemos para ti.</h3>
+        <div class="d-flex justify-content-center mt-n2">
+          <div class="mt-5 p-3 ">
+            <a href="{!! URL::to('recarga')!!}" class="btn btn-primary btn-lg active br-radiu w700 style-text" role="button" aria-pressed="true">¡Contratar ahora!</a>
+          </div>
+          <div class="mt-5 p-3 ">
+            <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete w700 style-text" role="button" aria-pressed="true">Ver paquetes</a>
           </div>
         </div>
-        
-        <img src="{{asset('images/Banner-secundario.jpg')}}" class="d-block w-100 d-none d-sm-block d-sm-none d-md-block mt-6" alt="imagen2">
-        {{--  Responsivo  --}}
-        <img src="{{asset('images/Banner-respon2.jpg')}}" class="d-block w-100 d-xl-none d-lg-none d-xl-block d-md-none d-lg-block " alt="imagen2">
-        {{--  Responsivo  --}}
-      </div>
-
-      <div class="carousel-item" data-bs-interval="4000">
-        <div class="position-absolute mt-14 pl-8">
-          <h1 class="text-white col-4 style-text d-none d-sm-block pri-texto Morganite-BoldItalic w900 font90 text-uppercase d-sm-none d-md-block">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile">spot1mobile.</span></h1>
-          <p class="mt-4 text-white h4 hmd col-6 w400 style-text d-none d-sm-block cont-texto d-sm-none d-md-block">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-
-          {{--  Responsivo  --}}
-          <h1 class="text-white col-11 font90 Morganite-BoldItalic w900 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block  mt-20 text-center">Cámbiate a lo de hoy cámbiate a <span class="texto-spot1mobile p-0">spot1mobile.</h1>
-          <p class="mt-4 text-white h6 text-center col-10 w400 style-text d-xl-none d-lg-none d-xl-block d-md-none d-lg-block ">Cámbiate y disfruta de los paquetes que tenemos para ti, disfruta de comunicarte, tus juegos y series favoritas, todo desde tu celular.</p>
-          {{--  Responsivo  --}}
-
-          <div class="d-flex flex-row mt-n2">
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('recarga')!!}" class="btn btn-primary btn-lg active br-radiu w700 style-text" role="button" aria-pressed="true">¡Contratar ahora!</a>
-            </div>
-            <div class="mt-5 p-3 ">
-              <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete w700 style-text" role="button" aria-pressed="true">Ver paquetes</a>
-            </div>
-          </div>
-        </div>
-
-        <img src="{{asset('images/Banner-terciario.jpg')}}" class="d-block w-100 d-none d-sm-block d-sm-none d-md-block mt-6" alt="imagen3">
-        {{--  Responsivo  --}}
-        <img src="{{asset('images/Banner-respon3.jpg')}}" class="d-block w-100 d-xl-none d-lg-none d-xl-block d-md-none d-lg-block " alt="imagen3">
-        {{--  Responsivo  --}}
       </div>
     </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
   </div>
 
-  <section class="pricing bg-shape color-barra-principal">
+  <section class="pricing bg-shape color-barra-principal mt-4">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="section-title">
             <div class="header-text mt-5">
-              <h3 class="Morganite-Book display-3 color-conocenos font-conocenos">Conócenos</em></h3>
+              <h3 class="text-white style-text w500 display-3 font-duda mb-3">¿Tienes alguna duda?</em></h3>
             </div>
             <div class="header-text mb-n3">
-              <h2 class="Morganite-BoldItalic display-1 font-h4 text-uppercase">Descubre la nueva empresa de <em>telefonía en México</em></h2>
+              <button type="button" class="btn btn-light br-radiu-contacto ">Contáctanos</button>
             </div>
           </div>
         </div>     
@@ -117,7 +42,15 @@
   <section class="pricing bg-shape">
     <div class="container">
       <div class="row">
-        <div class="col-7 col-responsive">
+        <div>
+          <h2 class="style-text w800 text-center mt-n2 color-primario">Conócenos</h2>
+        </div>
+        <div>
+          <p class="footer-heading h5 style-text w400 text-center color-secundario mt-4">En SPOT1MOBILE, creemos que la comunicación es esencial en la vida cotidiana. Nos esforzamos por ofrecer a nuestros
+             clientes a una red confiable y una cobertura excepcional en todo México.
+          </p>
+        </div>
+        {{--  <div class="col-7 col-responsive">
           <div>
             <div class="d-flex flex-row">
               <h4 class="w600 color-slogan">Misión</h4>
@@ -142,11 +75,11 @@
               </p>
             </div>
           </div>
-        </div>
-        <div class="col-1 d-none d-sm-block">
+        </div>  --}}
+        {{--  <div class="col-1 d-none d-sm-block">
           <hr class="hr">
-        </div>
-        <div class="col-sm mt-valores">
+        </div>  --}}
+        {{--  <div class="col-sm mt-valores">
           <div>
             <h4 class="w600 color-slogan">Valores</h4>
             <ul class="list-group mt-2">
@@ -162,27 +95,25 @@
               <li class="p-1 style-text w400"><i class="fa-solid fa-arrow-right p-1"></i>Excelencia</li>
             </ul>
           </div>
-        </div>
+        </div>  --}}
       </div>
     </div>
   </section>
 
-<section>
-  <div>  {{--  class="container"  --}}
-    <div class="row">
-      <div class="col color-apart p-3">
-        <h3 class="text-white mb-3 text-center p-3 style-text w400">¿Aún no eres parte de <spa class="style-text w800">SpotUno</spa>?</h3>
-        <h5 class="text-white text-center w400 style-text">¿Qué esperas? adquiérelo y disfruta de todos los beneficios</h5>
-        <div class="col text-center p-3">
-          <button type="button" class="btn btn-outline-secondary btn-border w400 style-text">¡Solicítalo ya!</button>
-        </div>
-      </div>
-      <div class="col color-paquet p-3">
-        <h3 class="text-white mb-3 text-center p-3 style-text w400">Disfruta de todo <span class="style-text w800">nuestros paquetes</span></h3>
-        <h5 class="text-white text-center w400 style-text">Queremos ofrecerte solo lo mejor, seleccina, compra y disfruta</h5>
-        <div class="col text-center p-3">
-            <a href="{!! URL::to('planes')!!}" class="btn btn-outline-secondary btn-border w400 style-text">Ver paquetes</a>
-        </div>
+<section class="img-cobertura">
+  <div class="row">
+    <div class="col p-3">
+      <h3 class="color-terciario mb-3 mt-7 text-center p-3 style-text w800">Cobertura</h3>
+      <h5 class="text-white text-right w400 style-text ml-5">Con spot 1 mobile tendrás cobertura en México, Estados Unidos y Canadá para comunicarte con las personas que más quieres.</h5>
+    </div>
+    <div class="col-1 d-none d-sm-block">
+      <hr class="hr">
+    </div>
+    <div class="col p-3">
+      <h3 class="text-white mb-3 mt-7 text-center p-3 style-text w400">Disfruta de todo <span class="style-text w800">nuestros paquetes</span></h3>
+      <h5 class="text-white text-center w400 style-text">Queremos ofrecerte solo lo mejor, seleccina, compra y disfruta</h5>
+      <div class="col text-center p-3">
+          <a href="{!! URL::to('planes')!!}" class="btn btn-outline-secondary btn-border w400 style-text">Ver paquetes</a>
       </div>
     </div>
   </div>
@@ -213,7 +144,8 @@
 
       </div>
     </div>
-    <div class="row" style="background-color: #c6e4ff; ">
+    <div class="row">
+    {{--  <div class="row" style="background-color: #c6e4ff; ">  --}}
       <div class="col-lg-12">
         <div class="d-flex justify-content-center">
           <div class="section-heading section-heading__text">
@@ -1245,6 +1177,19 @@
             </div>
           </div>
         </div> -->
+    </div>
+  </section>
+
+  <section class="pricing bg-shape">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div>
+          <h2 class="style-text w800 text-center mt-n2 color-primario">Nuestros aliados</h2>
+        </div>
+        <div class="col-sm-2 box-liados">
+
+        </div>
+      </div>
     </div>
   </section>
 

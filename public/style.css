@@ -705,25 +705,32 @@ body {
 .pl-8{
   padding-left: 8rem;
 }
+.br-radiu-contacto{
+  border-radius: 2rem;
+  font-size: 0.9rem;
+}
 .br-radiu{
-  color: #000!important;
+  color: #fff!important;
   border-radius: 2rem;
   font-size: 1rem!important;
   text-transform: inherit!important;
-  background-color: #fff!important;
-  border-color: #fff!important;
+  background-color: #002cbd!important;
+  border-color: #002cbd!important;
 }
 .br-radiu:hover{
   background-color: transparent!important;
-  border-color: #fff!important;
+  border-color: #002cbd!important;
+  color: #3b4d8f!important;
 }
 .vr-paquete{
+  color:#3b4d8f!important;
   background-color: transparent!important;
-  border-color: #fff!important;
+  border-color: #002cbd!important;
 }
 .vr-paquete:hover{
-  background-color: #fff!important;
-  border-color: #fff!important;
+  background-color: #002cbd!important;
+  border-color: #002cbd!important;
+  color: #fff!important;
 }
 .vr-paquete2{
   background-color: transparent!important;
@@ -736,10 +743,6 @@ body {
 }
 .vr-paquete1:hover{
   color: #6d6b6c!important;
-}
-.vr-paquete:hover{
-  background-color: #fff!important;
-  border-color: #fff!important;
 }
 .btn-contratar{
   background-color: #003cea;
@@ -821,7 +824,7 @@ body {
 }
 
 .color-barra-principal{
-  background-color: #eaeaea!important;
+  background-color: #293f88!important;
 }
 
 .mb-n3{
@@ -844,14 +847,39 @@ body {
 }
 
 .hr{
-  border: none;
+  /* border: none;
   border-left: 1px solid hsla(200, 10%, 50%,100)!important;
   height: 55vh!important;
-  /* height: 40vh!important; */
   width: 1px!important;    
   margin-left: 2rem!important;
-  margin-top: -1rem!important;
+  margin-top: -1rem!important; */
+
+  border: none;
+  border-color: white;
+  border-left: 4px white!important;
+  height: 30vh!important;
+  width: 4px!important;
+  margin-left: 2rem!important;
+  margin-top: 5rem!important;
+  color: white;
 }
+
+.box-liados{
+  margin-top: 2rem; 
+  background-color: #fff; 
+  width: 80%; 
+  height: 6rem; 
+  border-radius: 50px; 
+  border-width: 2.5px; 
+  border-style: solid; 
+  border-color: #f7fbfb;
+
+  box-shadow: rgba(200, 227, 230, 1) 0px 0px 0px 0px, 
+  rgba(200, 227, 230, 1) 0px 10px 6px 1px, 
+  rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
 
 .z-index-2 {
   z-index: 2;
@@ -1322,6 +1350,27 @@ button.close {
   bottom: 0%;
   padding-bottom: 60%;
   z-index: 1;
+}
+
+.color-primario{
+  color: #283e88;
+}
+
+.color-secundario{
+  color: #9f9f9f;
+}
+
+.color-terciario{
+  color: #1ca2d7;
+}
+
+.img-cobertura{
+  background-image: url(images/Cobertura.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-size: cover; */
+  width: 100%;
+  padding: 20px 0px 30px 0px;
 }
 
 /*## ESTILOS DE LALO FIN##*/

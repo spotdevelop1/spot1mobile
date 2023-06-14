@@ -102,19 +102,15 @@
 
 <section class="img-cobertura">
   <div class="row">
-    <div class="col p-3">
-      <h3 class="color-terciario mb-3 mt-7 text-center p-3 style-text w800">Cobertura</h3>
-      <h5 class="text-white text-right w400 style-text ml-5">Con spot 1 mobile tendrás cobertura en México, Estados Unidos y Canadá para comunicarte con las personas que más quieres.</h5>
+    <div class="p-3">
+      <h3 class="color-terciario mb-1 text-center p-3 style-text w800">Cobertura</h3>
+      <h5 class="text-white text-center w400 style-text mt-2">Con spot 1 mobile tendrás cobertura en México,</h5>
+      <h5 class="text-white text-center w400 style-text mt-2">Estados Unidos y Canadá para comunicarte con</h5>
+      <h5 class="text-white text-center w400 style-text mt-2">las personas que más quieres.</h5>
     </div>
-    <div class="col-1 d-none d-sm-block">
-      <hr class="hr">
+    <div class="col text-center p-3">
+      <a href="{!! URL::to('mapa')!!}" class="btn btn-light br-radiu-contacto color-slogan">Ver mapa</a>
     </div>
-    <div class="col p-3">
-      <h3 class="text-white mb-3 mt-7 text-center p-3 style-text w400">Disfruta de todo <span class="style-text w800">nuestros paquetes</span></h3>
-      <h5 class="text-white text-center w400 style-text">Queremos ofrecerte solo lo mejor, seleccina, compra y disfruta</h5>
-      <div class="col text-center p-3">
-          <a href="{!! URL::to('planes')!!}" class="btn btn-outline-secondary btn-border w400 style-text">Ver paquetes</a>
-      </div>
     </div>
   </div>
 </section>
@@ -152,7 +148,7 @@
             <h2 class="mb-3 color-text-planes style-text w500">¡Tenemos los mejores planes!</h2>
             <h2><span class="texto-planes style-text w900">¡Obten el que más te guste!</span></h2>
           </div>
-          <div class="ml-5 bg-light w-25 b-rounded mt-3 h-4" >
+          <div class="ml-5 bg-light w-25 b-rounded mt-3 h-4 color-cuaternario">
             <div class="mt-3 text-center">
           <button type="button" class="btn color-tarje style-text w900 btn-hover text-capitalize nav-item btn-planes activeTarj" onclick="planesUno();">Promoción</button>
           <button type="button" class="btn color-tarje style-text w900 text-capitalize text-capitalize btn-planes" onclick="planesDos();">Prepago</button>
@@ -1187,18 +1183,92 @@
           <h2 class="style-text w800 text-center mt-n2 color-primario">Nuestros aliados</h2>
         </div>
         <div class="col-sm-2 box-liados">
-
+          <div class="d-flex justify-content-center">
+            <div class="p-4">
+              <img src="{{asset('images/cybolt.png')}}" alt="Cybolt" class="w-100 mt-2 mx-auto">
+            </div>
+            <div class="p-4">
+              <img src="{{asset('images/spotuno.png')}}" alt="Spot Uno" class="w-100 mt-2 mx-auto">
+            </div>
+            <div class="p-4">
+              <img src="{{asset('images/smart.png')}}" alt="Smart" class="w-100 mt-2 mx-auto">
+            </div>
+            <div class="p-4">
+              <img src="{{asset('images/global.png')}}" alt="Global" class="w-100 mt-2 mx-auto">
+            </div>
+            <div class="p-4">
+              <img src="{{asset('images/hebe.png')}}" alt="Hebe" class="w-100 mt-2 mx-auto">
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="simple-cta mb-5">
-    <div class="mt-4 ml-2 ml-0">
-      <h2 class="text-white style-text Morganite-BoldItalic font137 font50 w900 m-5 text-uppercase col-4 col-responsive7">Recarga desde tu celular</h2>
+  <section class="pricing bg-shape" style="background-color: #f5f5f5;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div>
+            <div class="d-flex flex-row">
+              <img src="{{asset('images/person-pregunta.png')}}" class="Preguntas Personas" alt="Imagen Misión">
+            </div>
+          </div>
+        </div>
+        <div class="col d-none d-sm-block">
+          <hr class="hrs">
+        </div>
+        <div class="col-5 mt-3">
+          <div>
+            <h4 class="w600 color-slogan">Preguntas frecuentes</h4>
+            <ul class="list-group mt-5">
+              <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Mi celular es compatible?</li>
+              <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Cómo realizar una recarga?</li>
+              <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Cómo solicitar mi SIM?</li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+      </div>
     </div>
-    <div class="ml-5 mt-l3">
-      <button class="btn btn-contratar mt-4 w-20 w-29 text-center w-34" type="button"><span class="span-contratar w800 style-text">Contratar</span> </button>
+  </section>
+
+  <section class="simple-cta">
+    <div>
+      <h2 class="style-text w800 text-center mt-n2 color-sextario h3">¿Por qué elegirnos?</h2>
+    </div>
+    <div class="d-flex justify-content-center">
+
+        <div class="d-flex flex-row">
+          <div class="mt-5">
+            <img src="{{asset('images/mejores-paquetes.png')}}" class="w-80" alt="Imagen Paquete">
+          </div>
+          <div>
+            <p class="col-8 p-2">Los mejores paquetes</p>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row">
+          <div class="mt-5">
+            <img src="{{asset('images/mejores-precios.png')}}" class="w-80" alt="Imagen Precio">
+          </div>
+          <div>
+            <p class="col-8 p-2">Los mejores precios</p>
+          </div>
+        </div>
+
+        <div class="d-flex flex-row">
+          <div class="mt-5">
+            <img src="{{asset('images/mejores-promociones.png')}}" class="w-80" alt="Imagen Promoción">
+          </div>
+          <div>
+            <p class="col-8 p-2">Las mejores promociones</p>
+          </div>
+        </div>
+
     </div>
   </section> 
 

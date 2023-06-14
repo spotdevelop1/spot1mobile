@@ -890,10 +890,10 @@ cta
 */
 
 section.simple-cta {
-  background-image: url(../images/footer-secunadrio.jpg);
+  background-image: url(../images/footer-secunadrio.png);
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  /* background-position: center center; */
+  /* background-size: cover; */
   width: 100%;
   /* padding: 180px 0px 180px 0px; */
   /* padding: 220px 0px 300px 0px; */
@@ -2375,7 +2375,7 @@ body {
   /** BARRA TIPO APP EN RESPONSIVE**/
 
   section.simple-cta {
-    background-image: url(../images/footer-secunadrio.jpg)!important;
+    background-image: url(../images/footer-secunadrio.png)!important;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

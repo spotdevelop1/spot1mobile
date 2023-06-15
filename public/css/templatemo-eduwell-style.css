@@ -337,7 +337,7 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #fff!important;
+  color: #0c34bf9e!important;
   opacity: 0.75;
 }
 .header-area .main-nav .nav li a.active {
@@ -1061,7 +1061,8 @@ contact us
 */
 
 footer.contact-us {
-  background-color: #1e2043;
+  background-color: #f4f4f4;
+  /* background-color: #1e2043; */
 }
 
 section.contact-us:after {

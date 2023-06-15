@@ -3,7 +3,7 @@
 
 <section class="testimonials" id="testimonials">
 
-    <div class="row" style="background-color: #c6e4ff; ">
+    <div class="row">
       <div class="col-lg-12">
         <div class="d-flex justify-content-center">
           <div class="section-heading section-heading__text">

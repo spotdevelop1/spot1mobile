@@ -345,6 +345,11 @@ body {
 .mt-n10{
   margin-top: -10rem;
 }
+
+.mt-11{
+  margin-top: 11rem;
+}
+
 .mt-14{
   top: 14rem;
 }
@@ -625,7 +630,7 @@ body {
   padding: 4rem!important;
 }
 .hr-enlaces{
-  background-color: #ffffff;
+  background-color: #000;
   height: 0.2rem!important;
   width: 80%;
   /* margin: auto; */
@@ -795,6 +800,8 @@ body {
 .mt-n2{
   margin-top: -2rem;
 }
+
+
 
 .text-ingre{
    font-size: 1rem;
@@ -1374,6 +1381,10 @@ button.close {
 
 .color-sextario{
   color: #70a9fe;
+}
+
+.color-septenario{
+  background-color: #f4f4f4!important;
 }
 
 .img-cobertura{

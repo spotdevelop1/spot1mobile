@@ -6,7 +6,7 @@
 
 
 
-  <section class="pricing bg-shape color-barra-principal">
+  <section class="pricing bg-shape color-septenario mt-11">
     <div class="container">
       <div class="row">
         <div class="col-12 mapaAltan" id="mapaAltan">

@@ -1211,7 +1211,7 @@
         <div class="col-6">
           <div>
             <div class="d-flex flex-row">
-              <img src="{{asset('images/person-pregunta.png')}}" class="Preguntas Personas" alt="Imagen Misión">
+              <img src="{{asset('images/person-pregunta.png')}}" class="mr-5" alt="Preguntas Personas">
             </div>
           </div>
         </div>

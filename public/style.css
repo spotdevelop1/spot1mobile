@@ -305,7 +305,7 @@ body {
   border-bottom-left-radius: 50px; 
   border-bottom-right-radius: 50px;
   color:#FFF;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .tarjet-text{
@@ -1403,11 +1403,14 @@ button.close {
 .hrs{
   border: none;
   border-left: 1px solid hsla(200, 10%, 50%,100)!important;
-  height: 66vh!important;
+  /* height: 66vh!important; */
+  /* height: 29vh!important; */
   width: 4px!important;
-  margin-left: 4rem!important;
+  /* margin-left: 4rem!important; */
+  margin-left: 1rem!important;
   margin-top: 1rem!important;
 }
+
 
 .cursor-pointer{
   cursor: pointer;

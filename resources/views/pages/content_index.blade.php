@@ -5,7 +5,7 @@
   <div class="container" style="background-color: #fff">
     <div class="row">
       <div class="col">
-        <img src="{{asset('images/person-principal.png')}}" class="d-block w-100 mt-7 ml-5" alt="imagen1">
+        <img src="{{asset('images/person-principal.png')}}" class="d-block w-100 mt-7 ml-5 respW-142 respMl-1" alt="imagen1">
       </div>
       <div class="col align-self-center mt-7">
         <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a lo de hoy</h2>
@@ -1184,19 +1184,19 @@
         </div>
         <div class="col-sm-2 box-liados">
           <div class="d-flex justify-content-center">
-            <div class="p-4">
+            <div class="p-4 respP-1">
               <img src="{{asset('images/cybolt.png')}}" alt="Cybolt" class="w-100 mt-2 mx-auto">
             </div>
-            <div class="p-4">
+            <div class="p-4 respP-1">
               <img src="{{asset('images/spotuno.png')}}" alt="Spot Uno" class="w-100 mt-2 mx-auto">
             </div>
-            <div class="p-4">
+            <div class="p-4 respP-1">
               <img src="{{asset('images/smart.png')}}" alt="Smart" class="w-100 mt-2 mx-auto">
             </div>
-            <div class="p-4">
+            <div class="p-4 respP-1">
               <img src="{{asset('images/global.png')}}" alt="Global" class="w-100 mt-2 mx-auto">
             </div>
-            <div class="p-4">
+            <div class="p-4 respP-1">
               <img src="{{asset('images/hebe.png')}}" alt="Hebe" class="w-100 mt-2 mx-auto">
             </div>
           </div>
@@ -1215,13 +1215,13 @@
             </div>
           </div>
         </div>
-        <div class="col d-none d-sm-block">
+        <div class="col d-none d-sm-block d-sm-none d-md-block ">
           <hr class="hrs">
         </div>
-        <div class="col-5 mt-3">
+        <div class="col-5 mt-3 respCol-10 respMb-3">
           <div>
             <h4 class="w600 color-slogan">Preguntas frecuentes</h4>
-            <ul class="list-group mt-5">
+            <ul class="list-group mt-5 respMt-1">
               <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Mi celular es compatible?</li>
               <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Cómo realizar una recarga?</li>
               <li class="p-1 style-text w500 mt-5"><i class="fa-solid fa-circle-down p-1 color-quinario h4 cursor-pointer"></i>¿Cómo solicitar mi SIM?</li>
@@ -1240,7 +1240,7 @@
     <div>
       <h2 class="style-text w800 text-center mt-n2 color-sextario h3">¿Por qué elegirnos?</h2>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center respP-1">
 
         <div class="d-flex flex-row">
           <div class="mt-5">

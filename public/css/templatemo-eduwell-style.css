@@ -1758,7 +1758,7 @@ body {
     margin-right: 2rem;
     /* margin-right: 7rem; */
   }
-  
+
   .mt-14 {
     top: 15rem!important;
   }
@@ -1869,6 +1869,7 @@ body {
     height: 40vh!important;
     width: 4px!important;
     margin-left: 4rem!important;
+    margin-top: 2rem!important;
   }
 
 }

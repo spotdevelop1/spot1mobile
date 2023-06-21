@@ -902,10 +902,10 @@ section.simple-cta {
   /* filter: hue-rotate(-84deg); */
 }
 section.simple-ctaRe {
-  background-image: url(../images/Bannerpublicidad.jpg);
+  background-image: url(../images/banner-Inferior.jpg);
   background-repeat: no-repeat;
-  background-position: initial center;
-  background-size: cover;
+  /* background-position: initial center; */
+  /* background-size: cover; */
   width: 100%;
 
   /* padding: 220px 0px 300px 0px; */
@@ -2510,7 +2510,7 @@ body {
     /* filter: hue-rotate(-84deg); */
   }
   section.simple-ctaRe {
-    background-image: url(../images/banner-inferior-resp.jpg)!important;
+    background-image: url(../images/banner-Inferior.jpg)!important;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -1387,6 +1387,10 @@ button.close {
   background-color: #f4f4f4!important;
 }
 
+.color-bajoPrimario{
+  background-color: #9f9f9f1f!important;
+}
+
 .img-cobertura{
   background-image: url(images/Cobertura.jpg);
   background-repeat: no-repeat;

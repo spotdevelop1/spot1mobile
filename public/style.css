@@ -749,6 +749,17 @@ body {
 .vr-paquete1:hover{
   color: #6d6b6c!important;
 }
+.vr-planes{
+  width: 11rem;
+  color:#3b4d8f!important;
+  background-color: #fff!important;
+  border-color: #fff!important;
+}
+.vr-planes:hover{
+  background-color: #002cbd!important;
+  border-color: #002cbd!important;
+  color: #fff!important;
+}
 .btn-contratar{
   background-color: #003cea;
   transform: skew(-22deg);
@@ -1385,6 +1396,14 @@ button.close {
 
 .color-septenario{
   background-color: #f4f4f4!important;
+}
+
+.color-octava{
+  color: #00a5db;
+}
+
+.color-black{
+  color: #000;
 }
 
 .color-bajoPrimario{

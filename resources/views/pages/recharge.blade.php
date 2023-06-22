@@ -19,7 +19,7 @@
                     </div>
                     <div class="h-70 d-flex flex-column justify-content-center text-center p-4 wow zoomIn mt-8 " data-wow-delay="0.6s">
                         {{--  <h3 class="text-black mb-4 text-uppercase">Fácil y Rápido</h3>  --}}
-                        <p class="mb-4 text-uppercase color-secundario h5 mt-n2">Ingresa tus datos y paga en línea, evita las molestas filas y hazlo todo desde la comidad de tu casa</p>
+                        <p class="mb-4 text-uppercase color-secundario h6 mt-n2">Ingresa tus datos y paga en línea, evita las molestas filas y hazlo todo desde la comidad de tu casa</p>
                         <form action="{{route('recharges')}}" method="POST" id="formPago">
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
@@ -77,20 +77,59 @@
     </div>
   </section>
 
-  <section class="simple-ctaRe mb-5">
-    <div class="row">
-        <div class="col-4 d-none d-sm-block d-sm-none d-md-block">
-            <img src="{{asset('images/wifi.png')}}" alt="Banner secundario" class="img-wifi w-50 p-4 ml-5">
+  <section class="pricing bg-shape" style="background-color: #f5f5f5;">
+    <div class="container">
+      <div class="row">
+        <div class="col-5">
+          <div>
+            <div class="d-flex flex-row">
+             <h2 class="style-text w800 text-center mt-7 color-primario">Nuestros valores</h2>
+            </div>
+          </div>
         </div>
-        <div class="col-8 mt-7">
-            <div class="img-logo-black">
-                <img src="{{asset('images/logo-black.png')}}" alt="Banner secundario" class="w-50 w-40">
+        <div class="col d-none d-sm-block d-sm-none d-md-block ">
+          <hr class="hrs1">
+        </div>
+        <div class="container col-6 mt-3 respCol-10 respMb-3">
+          <div class="row">
+            <div class="col">
+                <ul class="list-group mt-3 respMt-1">
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">S</span>ervicio</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">P</span>rofesionalismo</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">O</span>rientación al cliente</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">T</span>rabajo en equipo</li>
+                </ul>
             </div>
-            <div>
-                <h2 class="text-white style-text w900 m-5 text-end text-break texto-conoce font-30 d-lg-none d-xl-block d-md-none d-lg-block">Conoce y contrata el mejor servicio de internet en casa</h2>
+            <div class="col">
+                <ul class="list-group mt-3 respMt-1">
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">M</span>ejora continua</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">O</span>bjetividad</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">B</span>uen humor</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">I</span>ntegridad</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">L</span>ealtad</li>
+                <li class="style-text w500 "><i class="fa-solid fa-arrow-right h5 p-2 color-quinario"></i></i><span class="color-black w900">E</span>xcelencia</li>
+                </ul>
             </div>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="simple-ctaRe mb-n12">
+    <div class="row">
+        <div class="d-flex align-items-center flex-column">
+            <div class="tex-center">
+                <h2 class="color-octava style-text w900 m-5 text-center text-break texto-conoce font-30 h1">El plan ideal</h2>
+            </div>
+            <div class="text-center">
+                <h2 class="text-white h3 style-text w600 text-center">En SPOT1 MOBILE, encontrarás el plan perfecto para tu estilo de vida.</h2>
+            </div>
+            <div class="mt-5 p-3 ">
+                <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-planes w700 style-text" role="button" aria-pressed="true">Ver planes</a>
+              </div>
+        </div>
+    </div>
 
 
     {{--  <div class="mt-4">

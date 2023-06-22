@@ -909,7 +909,7 @@ section.simple-ctaRe {
   width: 100%;
 
   /* padding: 220px 0px 300px 0px; */
-  padding: 50px 0px 300px 0px;
+  padding: 0px 0px 300px 0px;
 
   /* filter: hue-rotate(-84deg); */
 }
@@ -1780,6 +1780,15 @@ body {
     width: 4px!important;
     margin-left: 4rem!important;
     margin-top: 5rem!important;
+  }
+  .hrs1 {
+    height: 25vh!important;
+    width: 4px!important;
+    margin-left: 2rem!important;
+    margin-top: 3rem!important;
+  }
+  .mb-n12 {
+    margin-bottom: -12rem!important;
   }
 }
 

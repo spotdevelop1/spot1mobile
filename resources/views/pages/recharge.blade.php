@@ -80,7 +80,7 @@
   <section class="pricing bg-shape" style="background-color: #f5f5f5;">
     <div class="container">
       <div class="row">
-        <div class="col-5">
+        <div class="col-auto">
           <div>
             <div class="d-flex flex-row">
              <h2 class="style-text w800 text-center mt-7 color-primario">Nuestros valores</h2>

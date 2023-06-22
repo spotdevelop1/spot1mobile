@@ -2922,8 +2922,8 @@ body {
     font-size: 37px;
   } */
   .ml-5 {
-    /* margin-left: 1rem!important; */
-    margin-left: -1rem!important;
+    /* margin-left: -1rem!important; */
+    margin-left: 0rem!important;
   }
   .section-heading h2 {
     font-size: 25px!important;
@@ -2960,7 +2960,8 @@ body {
     background-color: #000;
   }
   .respW-142{
-    width: 142%!important;
+    width: 356%!important;
+    /* width: 142%!important; */
   }
   .box-liados {
     width: 94%!important;

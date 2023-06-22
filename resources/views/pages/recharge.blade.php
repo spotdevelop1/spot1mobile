@@ -82,12 +82,12 @@
       <div class="row">
         <div class="col-auto">
           <div>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row responMb-3">
              <h2 class="style-text w800 text-center mt-7 color-primario">Nuestros valores</h2>
             </div>
           </div>
         </div>
-        <div class="col d-none d-sm-block d-sm-none d-md-block ">
+        <div class="col d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
           <hr class="hrs1">
         </div>
         <div class="container col-6 mt-3 respCol-10 respMb-3">

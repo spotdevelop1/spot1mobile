@@ -1880,6 +1880,12 @@ body {
     margin-left: 4rem!important;
     margin-top: 2rem!important;
   }
+  .hrs1 {
+    height: 19vh!important;
+    width: 4px!important;
+    margin-left: 2rem!important;
+    margin-top: 3rem!important;
+  }
 
 }
 
@@ -1926,7 +1932,7 @@ body {
     display: none;
   }
   .header-area {
-    background: #232323!important;
+    background: #fff!important;
   }
   .header-area .nav {
     margin-top: 35px!important;
@@ -1956,8 +1962,22 @@ body {
     margin-left: 4rem!important;
   }
   section.simple-cta {
-    padding: 61px 0px 29px 0px!important;
-}
+    padding: 61px 0px 29px 0px!important; 
+  }
+  .hrs1 {
+    height: 19vh!important;
+    width: 4px!important;
+    margin-left: 2rem!important;
+    margin-top: 3rem!important;
+  }
+  section.simple-ctaRe {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 0px 0px 73px 0px;
+  }
+
 }
 
 @media (max-width: 1199px) {
@@ -1966,7 +1986,7 @@ body {
     /* margin-top: -64px!important; */
   }
   .header-area {
-    background: #232323!important;
+    background: #fff!important;
   }
   .mt-6 {
     margin-top: 5rem;
@@ -1997,6 +2017,13 @@ body {
   section.simple-cta {
     padding: 61px 0px 29px 0px!important;
   }
+  section.simple-ctaRe {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 0px 0px 73px 0px;
+  }
 }
 
 @media (max-width: 1085px) {
@@ -2013,7 +2040,7 @@ body {
     left: -25px;
   }
   .header-area {
-    background: #232323!important;
+    background: #fff!important;
   }
   .header-area .main-nav .nav {
     margin-top: -64px;
@@ -2049,6 +2076,13 @@ body {
   section.simple-cta {
     padding: 61px 0px 29px 0px!important;
   }
+  section.simple-ctaRe {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 50px 0px 73px 0px;
+  }
   
 }
 
@@ -2066,7 +2100,7 @@ body {
     display: none;
   }
   .header-area {
-    background: #232323!important;
+    background: #fff!important;
   }
 
   .mt-6 {
@@ -2100,6 +2134,13 @@ body {
   }
   section.simple-cta {
     padding: 61px 0px 29px 0px!important;
+  }
+  section.simple-ctaRe {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 50px 0px 73px 0px;
   }
 }
 
@@ -2291,6 +2332,20 @@ body {
     height: 35vh!important;
     width: 4px!important;
     margin-left: 4rem!important;
+  }
+  .texto-conoce {
+    font-size: 45px;
+    margin-top: 1rem!important;
+    margin-left: 0rem!important;
+  }
+  section.simple-ctaRe {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    padding: 157px 0px 158px 0px;
+  }
+  .col-auto {
+    width: 50%;
   }
 
 }
@@ -2524,9 +2579,8 @@ body {
     background-position: center center;
     background-size: cover;
     width: 100%;
-    /* padding: 180px 0px 180px 0px; */
-    padding: 220px 0px 300px 0px;
-  
+    /* padding: 220px 0px 300px 0px; */
+    padding: 180px 0px 0px 0px;
     /* filter: hue-rotate(-84deg); */
   }
   .booking {
@@ -2921,5 +2975,8 @@ body {
   }
   section.simple-cta {
     padding: 61px 0px 29px 0px!important;
+  }
+  .responMb-3{
+    margin-bottom: 3rem;
   }
 }

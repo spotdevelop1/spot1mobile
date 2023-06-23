@@ -30,8 +30,24 @@ class RechargeController extends Controller
         // ];
 
         // return $data;
+
+
         return view('pages.commerce', $data);
     }
+
+
+    public function rechargeAll(Request $request){
+
+        $response = HTTP::get('https://apps-ws.spot1.mx/getAllRates');
+        $responseData = $response->json();
+            
+        $data['offers'] = $responseData['offers'];
+        
+
+        return view('pages.recharge', $data);
+    }
+
+
 
    
 }

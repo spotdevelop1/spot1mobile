@@ -18,7 +18,7 @@ class OpenPayController extends Controller
 {
     public function references(Request $request){
         #Cambiar llaves#
-        $openpay = Openpay::getInstance('mx6hwd1zsacnw4mqbpca', 'sk_ebc33028470b462388e2382137c13312');
+        $openpay = Openpay::getInstance('mpxjtlnasipbctyey0js', 'sk_5fdd44dbb4e2488bbeff58176d1dde63');
         Openpay::setProductionMode(true);
 
         $amount = $request->get('amount');

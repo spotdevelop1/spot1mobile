@@ -432,9 +432,10 @@
 
 <script>
   //test
-  var stripe = Stripe("pk_live_51Mkc0gGMWTI2WWEadusfXBlo0Lp51r63U24p3eBW9S1StsVxWJE7hWU4vHy4oU7PFEBjTeqduTGn6MZ9im9p99aB00I58eQe4G");
+  var stripe = Stripe("pk_test_51Mkc0gGMWTI2WWEaqQSvctap0Y9WIZV8qTBwRcG3DkrzioRooS0kSOgM0IK2DwRCsGcVbgWIUYvfwOJpqQADcwju00kVKfBD6I");
   //produccion
-  // var stripe = Stripe("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");
+    {{--  var stripe = Stripe("pk_live_51Mkc0gGMWTI2WWEadusfXBlo0Lp51r63U24p3eBW9S1StsVxWJE7hWU4vHy4oU7PFEBjTeqduTGn6MZ9im9p99aB00I58eQe4G");  --}}
+
   var elements = stripe.elements();
 
   var style = {
@@ -471,7 +472,7 @@
       });
   });
 
-  function stripeTokenHandler(token) {
+  async function stripeTokenHandler(token) {
       console.log("TOKEN: ",token);
       // Insert the token ID into the form so it gets submitted to the server
       var form = document.getElementById('payment-form');
@@ -482,7 +483,20 @@
       form.appendChild(hiddenInput);
 
       // Submit the form
-      form.submit();
+      {{--  form.submit();  --}}
+
+      const response = await fetch('https://apps-ws-test.spot1.mx/paymentStripe', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            number,
+            stripeToken: tarjeta,
+            offerID,
+            client_id
+        })
+    })
   }
 
 </script>

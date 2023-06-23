@@ -41,9 +41,12 @@
                                 <div class="col-12 col-sm-12">
                                 <select class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="montoRecarga">
                                     <option selected disabled value="0">Monto a Recargar</option>
-                                    <option value="Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>
+                                    @foreach($offers as $offer)
+                                      <option value="{{$offer['id']}}">Plan ${{$offer['price_sale']}} {{$offer['name']}}</option>
+                                    @endforeach
+                                    {{--  <option value="Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>
                                     <option value="Plan $200 (Internet ilimitado*  Llamadas y SMS ilimitados*, 30D)">Plan $200 (Internet ilimitado*  Llamadas y SMS ilimitados*, 30D)</option>
-                                    <option value="Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>
+                                    <option value="Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>  --}}
                                 </select>
                                 </div>
                                 <!-- <div class="col-12">

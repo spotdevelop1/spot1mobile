@@ -7,7 +7,7 @@
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading">
           <h2 class="numero-cliente">Tu número {{$numeroTelefono}}</h2>
-          <h4 class="style-text w600">Completa tu pago de {{$montoRecarga}} <br><em class="style-text w700-italic">Elige donde quieres recargar:</em></h4>
+          <h4 class="style-text w600">Completa tu pago de ${{$offerData[0]->price_sale}} {{$offerData[0]->name}}  <br><em class="style-text w700-italic">Elige donde quieres recargar:</em></h4>
           {{--  <h5 class="mt-2 style-text w600 color-text-planes">También puedes pagar por medio de transferencia:</h5>
           <h5 class="mt-1 style-text w600">SPOT Uno SA de CV</h5>
           <h5 class="mt-1 style-text w600">BBVA 0017 8030 0366 1376</h5>

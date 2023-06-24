@@ -66,7 +66,7 @@ https://templatemo.com/tm-573-eduwell
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="/" class="logo respont-logo">
-                        <img class="w-50 ms-0 respMt-0 respW-30 {{(request () -> is ('recarga', 'planes', 'mapa')) ? 'mt-1': 'mt-5'}}" src="{{asset('images/icono-while.svg')}}" alt="spot1mobile" class="img-logo">
+                        <img class="w-50 ms-0 respMt-0 respW-30 fireMs-0 {{(request () -> is ('recarga', 'planes', 'mapa')) ? 'mt-1': 'mt-5'}}" src="{{asset('images/icono-while.svg')}}" alt="spot1mobile" class="img-logo">
                         {{--  <img class="w-200 mt-n1 ms-3" src="{{asset('images/icono-while.svg')}}" alt="spot1mobile" class="img-logo">  --}}
                     </a>
                     <!-- ***** Logo End ***** -->

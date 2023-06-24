@@ -4,10 +4,10 @@
 
   <div class="container" style="background-color: #fff">
     <div class="row">
-      <div class="col">
+      <div class="col d-none d-sm-block ">
         <img src="{{asset('images/person-principal.png')}}" class="d-block w-100 mt-7 ml-5 respW-142 respMl-1" alt="imagen1">
       </div>
-      <div class="col align-self-center mt-7">
+      <div class="col align-self-center mt-7 d-none d-sm-block ">
         <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a lo de hoy</h2>
         <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a SPOTMOBILE</h2>
         <h3 class="footer-heading h5 style-text w700 text-center color-secundario mt-4">Cámbiate y disfruta de los paquetes que tenemos para ti.</h3>
@@ -20,6 +20,25 @@
           </div>
         </div>
       </div>
+
+      {{--  Responsivo  --}}
+      <div class="col-4 col-md-8 d-sm-none d-md-block d-md-none d-lg-block d-lg-none d-xl-block d-xl-none">
+        <img src="{{asset('images/person-principal.png')}}" class="d-block w-100 mt-10 ml-0 respW-142 " alt="imagen1">
+      </div>
+      <div class="col-6 col-md-4 align-self-center mt-1 d-sm-none d-md-block d-md-none d-lg-block d-lg-none d-xl-block d-xl-none">
+        <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a lo de hoy</h2>
+        <h2 class="footer-heading h1 color-primario style-text w700 text-center">Cámbiate a SPOTMOBILE</h2>
+        <h3 class="footer-heading h5 style-text w700 text-center color-secundario mt-4">Cámbiate y disfruta de los paquetes que tenemos para ti.</h3>
+        <div class="d-flex justify-content-center mt-n2">
+          <div class="mt-5 p-3 ">
+            <a href="{!! URL::to('recarga')!!}" class="btn btn-primary btn-lg active br-radiu w700 style-text" role="button" aria-pressed="true">¡Contratar ahora!</a>
+          </div>
+          <div class="mt-5 p-3 ">
+            <a href="{!! URL::to('planes')!!}" class="btn btn-primary btn-lg active br-radiu vr-paquete w700 style-text" role="button" aria-pressed="true">Ver paquetes</a>
+          </div>
+        </div>
+      </div>
+      {{--  Responsivo  --}}
     </div>
   </div>
 

@@ -6,6 +6,9 @@
     <div class="row">
       <div class="col-lg-6 offset-lg-3">
         <div class="section-heading">
+          <input type="hidden" value="{{$numeroTelefono}}" id="numberClient">
+          <input type="hidden" value="{{$offerData[0]->offerID_second}}" id="offerID_second">
+          <input type="hidden" value="{{$client_id[0]->id}}" id="client_id">
           <h2 class="numero-cliente">Tu número {{$numeroTelefono}}</h2>
           <h4 class="style-text w600">Completa tu pago de ${{$offerData[0]->price_sale}} {{$offerData[0]->name}}  <br><em class="style-text w700-italic">Elige donde quieres recargar:</em></h4>
         </div>
@@ -200,7 +203,7 @@
               </ol>
               <div class="opps-footnote">Al completar estos pasos recibirás un correo de <strong>Nombre del negocio</strong> confirmando tu pago.</div>
             </div>
-          </div>	
+          </div>
 
         </div>
         <div class="modal-footer">
@@ -263,7 +266,7 @@
 
 <script>
   $('.referenceSpot').click(function(){
-    
+
     let amount = $('#amount').val();
     let description = $('#description').val();
 
@@ -306,7 +309,7 @@
 
 <script>
   $('.referenceSpotOxxo').click(function(){
-    
+
     let amount = $('#amount').val();
     {{--  let amount = 300.50;  --}}
     let description = $('#description').val();
@@ -329,7 +332,7 @@
         var currency = response.charges.data[0].currency;
         var reference = response.charges.data[0].payment_method.reference;
         var codigoBarra = response.charges.data[0].payment_method.barcode_url;
-        
+
         {{--  $('#stub').modal('show');  --}}
 
         if(response.code){
@@ -363,7 +366,7 @@
               $('#stub').modal('show');
             }
           })
-          
+
         }
 
         /*var reference = response.payment_method.reference;
@@ -410,7 +413,7 @@
     $('#montoOxxo').html('$'+amount.toFixed(2)+'<sup>MXN</sup>');
     $('#referenceOxxoCard').html(reference);
     $('#referenceOxxo').modal('show');  --}}
-  } 
+  }
 </script>
 
 <script>
@@ -462,7 +465,7 @@
           stripeTokenHandler(result.token);
           //Bloqueart boton de stripe
           var btncompra = document.getElementById('stripePagar');
-          btncompra.disabled = true; 
+          btncompra.disabled = true;
           }
       });
   });
@@ -476,6 +479,11 @@
       hiddenInput.setAttribute('name', 'stripeToken');
       hiddenInput.setAttribute('value', token.id);
       form.appendChild(hiddenInput);
+      var numberClient = $('#numberClient').val();
+      var offerID_second = $('#offerID_second').val();
+      var client_id = $('#client_id').val();
+
+      let timerInterval
 
       // Submit the form
       {{--  form.submit();  --}}
@@ -486,13 +494,57 @@
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            number,
-            stripeToken: tarjeta,
-            offerID,
-            client_id
+            number: numberClient,
+            stripeToken: token.id,
+            offerID: offerID_second,
+            client_id: client_id
         })
-    })
-  }
+    });
+
+
+    {{--  console.log(response); return false;  --}}
+
+    Swal.fire({
+    title: 'Espere un momento',
+    html: 'Se está realizando el pago de su recarga.',
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () => {
+      Swal.showLoading()
+      const b = Swal.getHtmlContainer().querySelector('b')
+      timerInterval = setInterval(() => {
+        {{--  b.textContent = Swal.getTimerLeft()  --}}
+      }, 100)
+    },
+    willClose: () => {
+      clearInterval(timerInterval)
+    }
+  }).then((result) => {
+    /* Read more about handling dismissals below */
+    if(response.status == 200){
+      Swal.fire({
+        icon: 'success',
+        title: 'Pago Completado!',
+        text: 'Su pago se realizado correctamente',
+        showConfirmButton: false,
+        timer: 2500
+      })
+      console.log("response.statusText: ", response.status);
+      console.log("response: ", response); return false;
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Hubo un error!',
+        text: 'Verifique su pago nuevamente',
+        showConfirmButton: false,
+        timer: 2500
+      })
+    }
+  })
+
+  {{--  console.log("response.statusText: ", response.status);
+  console.log("response: ", response); return false;  --}}
+}
 
 </script>
 

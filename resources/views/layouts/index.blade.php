@@ -40,6 +40,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
+
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}">
     <link rel="stylesheet" href="{{asset('css/templatemo-eduwell-style.css')}}">
@@ -75,6 +76,7 @@ https://templatemo.com/tm-573-eduwell
                         <li class="{{(request () -> is ('/')) ? 'btn-enalce': ''}}"><a href="/" class="h-color {{(request () -> is ('/')) ? 'active': ''}} style-text">Inicio</a></li>
                         <li class="{{(request () -> is ('recarga')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('recarga')!!}" class="h-color {{(request () -> is ('recarga')) ? 'active': ''}} style-text">Recargas</a></li>
                         <li class="{{(request () -> is ('planes')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('planes')!!}" class="h-color {{(request () -> is ('planes')) ? 'active': ''}} style-text">Paquetes</a></li>
+                        <li class="{{(request () -> is ('imei')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('imei')!!}" class="h-color {{(request () -> is ('imei')) ? 'active': ''}} style-text">Imei</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

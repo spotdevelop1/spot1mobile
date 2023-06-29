@@ -778,6 +778,9 @@ body {
 	box-shadow: 0 0 0 1px #003cea inset, 0 0 0 2px rgba(255, 255, 255, 40) inset, 0 5px 2px 0 #034c89, 0 8px 8px 1px rgba(0, 0, 0, 0.5);
 	background-color: #003cea99;
 }
+.w-1{
+  width: 1rem;
+}
 .w-40{
   width: 40%;
 }
@@ -1437,6 +1440,34 @@ button.close {
 
 .cursor-pointer{
   cursor: pointer;
+}
+
+.font-07{
+  font-size: 0.7rem;
+}
+
+.border-none{
+  border-bottom-color: #3d4f92;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.border-imei{
+  border: 2px solid #3d4f92;
+  border-radius: 2rem;
+  width: 55%;
+  padding: 0.1rem;
+}
+
+.border-imeiRes{
+  border: 2px solid #3d4f92;
+  border-radius: 2rem;
+  width: 20rem;
+  padding: 0.1rem;
+}
+.ml-1{
+  margin-left: 0.5rem;
 }
 
 /*## ESTILOS DE LALO FIN##*/

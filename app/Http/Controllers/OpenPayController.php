@@ -17,29 +17,36 @@ require_once '../vendor/autoload.php';
 class OpenPayController extends Controller
 {
     public function references(Request $request){
+        // return $request;
         #Cambiar llaves#
         $openpay = Openpay::getInstance('mpxjtlnasipbctyey0js', 'sk_5fdd44dbb4e2488bbeff58176d1dde63');
-        Openpay::setProductionMode(true);
+        Openpay::setProductionMode(false);
 
-        $amount = $request->get('amount');
+        $amount = $request->get('price_sale');
         $description = $request->get('description');
 
         $customer = array(
             'name'=> 'banda',
-            'lastname' => '',
+            'lastname' => 'Sanchez',
             'phone_number' => '9613601404',
             'email' => 'c.banda07@hotmail.com'
         );
+
         $chargeData = array(
             'method' => 'store',
             'amount' => floatval($amount),
             'description' => $description,
             'customer' => $customer
         );
-
+        // print_r($chargeData);
+    
+        // $charge = $openpay->charges->create($chargeData);
+        // return $charge;
+        // return response()->json($charge);
 
         try {
             $charge = $openpay->charges->create($chargeData);
+            // return $charge;
             return response()->json([
                 'order_id' => $charge->id,
                 'payment_method' => $charge->payment_method,

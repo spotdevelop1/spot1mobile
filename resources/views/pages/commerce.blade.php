@@ -8,9 +8,11 @@
         <div class="section-heading">
           <input type="hidden" value="{{$numeroTelefono}}" id="numberClient">
           <input type="hidden" value="{{$offerData[0]->offerID_second}}" id="offerID_second">
+          <input type="hidden" value="{{$offerData[0]->price_sale}}" id="price_sale">
+          <input type="hidden" value="{{$offerData[0]->description}}" id="description">
           <input type="hidden" value="{{$client_id[0]->id}}" id="client_id">
           <h2 class="numero-cliente">Tu número {{$numeroTelefono}}</h2>
-          <h4 class="style-text w600">Completa tu pago de ${{$offerData[0]->price_sale}} {{$offerData[0]->name}}  <br><em class="style-text w700-italic">Elige donde quieres recargar:</em></h4>
+          <h4 class="style-text w600">Completa tu pago de ${{$offerData[0]->price_sale}} {{$offerData[0]->description}}  <br><em class="style-text w700-italic">Elige donde quieres recargar:</em></h4>
         </div>
       </div>
       <div class="col-lg-10 offset-lg-1">
@@ -72,7 +74,7 @@
         <div class="modal-header p-4 formulario_pagar">
           <div class="modal-body col-8 text-center">
             <h5 class="text-star">Total a pagar</h5>
-            <h5 class="text-star p-1 pt-2 fw-bold">$300.00</h5>
+            <h5 class="text-star p-1 pt-2 fw-bold">${{$offerData[0]->price_sale}}</h5>
             <hr>
             <h5 class="text-star p-1 pt-2">Número de Referencia</h5>
             <h5 class="text-star fw-bold" id="referencePago"></h5>
@@ -265,17 +267,20 @@
 </div>
 
 <script>
-  $('.referenceSpot').click(function(){
 
-    let amount = $('#amount').val();
-    let description = $('#description').val();
+
+  $( ".referenceSpot" ).on( "click", function() {
+
+    var price_sale = $('#price_sale').val();
+    var description = $('#description').val();
 
     $.ajax({
       url: "{{route('references')}}",
       type: 'GET',
-      data: {amount, description},
+      data: {price_sale, description},
       success: function(response){
-        // console.log("PAYMENT_THOD: ",response.payment_method)
+       console.log("RESPONSE:", response);
+        //console.log("PAYMENT_THOD: ",response.payment_method); return false;
         var reference = response.payment_method.reference;
         var codeBarra = response.payment_method.barcode_url;
 
@@ -289,7 +294,7 @@
             Swal.showLoading()
             const b = Swal.getHtmlContainer().querySelector('b')
             timerInterval = setInterval(() => {
-              b.textContent = Swal.getTimerLeft()
+              {{--  b.textContent = Swal.getTimerLeft()  --}}
             }, 5)
           },
           willClose: () => {
@@ -304,7 +309,9 @@
         })
       }
     })
-  })
+
+  } );
+
 </script>
 
 <script>

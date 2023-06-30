@@ -27,7 +27,7 @@ class OpenPayController extends Controller
 
         $customer = array(
             'name'=> 'banda',
-            'lastname' => 'Sanchez',
+            'lastname' => '',
             'phone_number' => '9613601404',
             'email' => 'c.banda07@hotmail.com'
         );
@@ -39,10 +39,6 @@ class OpenPayController extends Controller
             'customer' => $customer
         );
         // print_r($chargeData);
-    
-        // $charge = $openpay->charges->create($chargeData);
-        // return $charge;
-        // return response()->json($charge);
 
         try {
             $charge = $openpay->charges->create($chargeData);

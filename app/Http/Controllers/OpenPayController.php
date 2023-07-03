@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Openpay\Data\OpenPay as OpenPay;
+use Openpay\Data\Openpay as OpenPay;
 use Exception;
 use OpenpayApiError;
 use OpenpayApiAuthError;

@@ -13,6 +13,7 @@ class RechargeController extends Controller
 {
 
     public function recharge(Request $request){
+        // return $request;
 
         $idOffer = $request->post('montoRecargaInput');
 
@@ -23,7 +24,7 @@ class RechargeController extends Controller
 
         $data['offerData'] = DB::table('offers')
                 ->join('rates', 'rates.alta_offer_id', '=', 'offers.id')
-                ->where('offers.id', $idOffer)
+                ->where('offers.offerID_second', $idOffer)
                 ->select('rates.description','offers.price_sale','offers.offerID_second')
                 ->get();
 
@@ -61,7 +62,7 @@ class RechargeController extends Controller
         // $data['offers'] = $responseData['offers'];
         
 
-        return view('pages.recharge', $data);
+        return view('pages.recharge');
     }
 
 

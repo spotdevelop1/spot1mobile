@@ -30,7 +30,7 @@
                                 </div> -->
                                 <input type="hidden" value="" id="tipoServicioInput" name="tipoServicioInput">
                                 <div class="col-12 col-sm-6">
-                                    <select id="typeService" class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="tipoServicio">
+                                    <select id="typeService" class="form-select border-0 color-bajoPrimario" style="height: 55px;">
                                         <option selected disabled value="0">Tipo de Servicio</option>
                                         <option value="MOVIL">Móvil</option>
                                         {{--  <option value="MIFI">MIFI</option>  --}}
@@ -39,7 +39,7 @@
 
                                 <input type="hidden" value="" id="montoRecargaInput" name="montoRecargaInput">
                                 <div class="col-12 col-sm-12">
-                                <select class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="montoRecarga">
+                                <select class="form-select border-0 color-bajoPrimario offers" style="height: 55px;" id="montoRecarga">
                                     <option selected disabled value="0">Monto a Recargar</option>
                                     {{--  @foreach($offers as $offer)
                                       <option value="{{$offer['id']}}">Plan ${{$offer['price_sale']}} {{$offer['name']}}</option>
@@ -169,8 +169,10 @@
         var numeroSinGuion = numeroSinParentesis.replace("-", " ")
         var numeroSinEspacio = numeroSinGuion.replace(/\s+/g, '');
 
-        var tipoServicio = $('#tipoServicio').val();
+        var tipoServicio = $('#typeService').val();
         var montoRecarga = $('#montoRecarga').val();
+
+
 
         if(numeroSinEspacio == ""){
             return Swal.fire({
@@ -223,12 +225,23 @@
 <script>
   $('#typeService').change(function(){
     let service = $('#typeService').val();
-    console.log(service);
+    let option = "<option value='0'> Monto a Recargar</option>";
+    //console.log(service);
     $.ajax({
       url: 'https://apps-ws.spot1.mx/getAllRates',
       data: {service},
       success: function(response){
-        console.log(response);
+       // console.log(response); return false;
+        let ofertas = response.offers;
+        
+
+        ofertas.forEach( function(elements) {
+          //console.log(elements); 
+          option+="<option value='"+elements.offerID+"' > Plan $"+elements.price_sale+" "+elements.name+"</option>";
+
+       });
+
+        $('.offers').html(option); 
       }
     })
   })

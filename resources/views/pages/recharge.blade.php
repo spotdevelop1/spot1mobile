@@ -30,10 +30,10 @@
                                 </div> -->
                                 <input type="hidden" value="" id="tipoServicioInput" name="tipoServicioInput">
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="tipoServicio">
+                                    <select id="typeService" class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="tipoServicio">
                                         <option selected disabled value="0">Tipo de Servicio</option>
                                         <option value="MOVIL">Móvil</option>
-                                        <option value="MIFI">MIFI</option>
+                                        {{--  <option value="MIFI">MIFI</option>  --}}
                                     </select>
                                 </div>
 
@@ -41,12 +41,10 @@
                                 <div class="col-12 col-sm-12">
                                 <select class="form-select border-0 color-bajoPrimario" style="height: 55px;" id="montoRecarga">
                                     <option selected disabled value="0">Monto a Recargar</option>
-                                    @foreach($offers as $offer)
+                                    {{--  @foreach($offers as $offer)
                                       <option value="{{$offer['id']}}">Plan ${{$offer['price_sale']}} {{$offer['name']}}</option>
-                                    @endforeach
-                                    {{--  <option value="Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $300 (Internet ilimitado*  Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>
-                                    <option value="Plan $200 (Internet ilimitado*  Llamadas y SMS ilimitados*, 30D)">Plan $200 (Internet ilimitado*  Llamadas y SMS ilimitados*, 30D)</option>
-                                    <option value="Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)">Plan $100 (5,000MB, Llamadas y SMS ilimitados*  HOT SPOT**, 30D)</option>  --}}
+                                    @endforeach  --}}
+
                                 </select>
                                 </div>
                                 <!-- <div class="col-12">
@@ -220,6 +218,20 @@
         }
     });
 
+</script>
+
+<script>
+  $('#typeService').change(function(){
+    let service = $('#typeService').val();
+    console.log(service);
+    $.ajax({
+      url: 'https://apps-ws.spot1.mx/getAllRates',
+      data: {service},
+      success: function(response){
+        console.log(response);
+      }
+    })
+  })
 </script>
 
 @endsection

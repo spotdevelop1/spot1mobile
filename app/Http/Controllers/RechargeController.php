@@ -56,10 +56,10 @@ class RechargeController extends Controller
 
     public function rechargeAll(Request $request){
 
-        $response = HTTP::get('https://apps-ws.spot1.mx/getAllRates');
-        $responseData = $response->json();
+        // $response = HTTP::get('https://apps-ws.spot1.mx/getAllRates');
+        // $responseData = $response->json();
             
-        $data['offers'] = $responseData['offers'];
+        // $data['offers'] = $responseData['offers'];
         
 
         return view('pages.recharge', $data);

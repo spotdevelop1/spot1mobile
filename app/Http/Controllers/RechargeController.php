@@ -21,7 +21,6 @@ class RechargeController extends Controller
         $numeroTelefono = str_replace( '-', ' ', $numeroTelefono);
         $numeroTelefono = preg_replace( '/\s+/i', '', $numeroTelefono);
 
-
         $data['offerData'] = DB::table('offers')
                 ->join('rates', 'rates.alta_offer_id', '=', 'offers.id')
                 ->where('offers.id', $idOffer)

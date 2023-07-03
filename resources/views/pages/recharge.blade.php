@@ -237,7 +237,7 @@
 
         ofertas.forEach( function(elements) {
           //console.log(elements); 
-          option+="<option value='"+elements.offerID+"' > Plan $"+elements.price_sale+" "+elements.name+"</option>";
+          option+="<option value='"+elements.offerID+"' > Plan "+elements.name+" - $"+elements.price_sale+"</option>";
 
        });
 

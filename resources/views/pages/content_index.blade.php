@@ -621,7 +621,7 @@
     
                   <div class="mt-7">
                     <img src="{{asset('images/Paquetes-27.png')}}" alt="Imagen4" class="img-precio1 w-75">
-                    <!-- <p class="text-uppercase h5 p-2 color-tarjet w600">Incluye compartición de datos*</p> -->
+                    <p class="text-uppercase h5 p-2 color-tarjet w600">Incluye compartición de datos*</p>
                   </div>
                 </div>
               </div>
@@ -633,7 +633,7 @@
                   <span class="tarjet-text2 w900 style-text p-3">SPOT  500</span>
                   <div>
                   {{--  <div class="title"> original de arriba  --}}
-                    <img src="{{asset('images/Paquetes-19.png')}}" alt="Imagen4" class="img-precio1">
+                    <img src="{{asset('images/Paquetes-22.png')}}" alt="Imagen4" class="img-precio1">
                   </div>
     
                   <div class="price  d-flex flex-row">
@@ -646,8 +646,8 @@
                   <hr class="hr-basico">
     
                   <ul class="feature-list">
-                    <li class="style-text w900 w500 texto-secundarioPlan2">5,000 MB</li>
-                    <li class="style-text w900 w500 texto-secundarioPlan2">5,000* <span class="h07">MB velocidad reducida</span></li>
+                    <li class="style-text w900 w500 texto-secundarioPlan2">50,000 MB</li>
+                    <li class="style-text w900 w500 texto-secundarioPlan2">50,000* <span class="h07">MB velocidad reducida</span></li>
                   </ul>
     
                   <div class="action-button">

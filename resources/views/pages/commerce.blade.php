@@ -279,7 +279,7 @@
       type: 'GET',
       data: {price_sale, description},
       success: function(response){
-       console.log("RESPONSE:", response);
+      //  console.log("RESPONSE:", response);
         //console.log("PAYMENT_THOD: ",response.payment_method); return false;
         var reference = response.payment_method.reference;
         var codeBarra = response.payment_method.barcode_url;

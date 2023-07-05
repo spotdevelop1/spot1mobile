@@ -37,12 +37,14 @@ Route::get('/mapa', function(){
     return View::make('pages.map');
 });
 
-Route::get('/imei', function(){
+Route::get('/consult-imei', function(){
     return View::make('pages.imei');
 });
 
 
 Route::post('/recargas', 'RechargeController@recharge')->name('recharges');
+
+Route::get('/imei', 'RechargeController@imei')->name('imei');
 
 Route::get('/recarga', 'RechargeController@rechargeAll')->name('recharge');
 

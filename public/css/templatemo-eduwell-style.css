@@ -1841,7 +1841,7 @@ body {
     }
   }
   .border-imei {
-    width: 63%!important;
+    width: 77%!important;
   }
 }
 
@@ -1906,7 +1906,7 @@ body {
     }
   }
   .border-imei {
-    width: 63%!important;
+    width: 77%!important;
   }
 
 }
@@ -2006,7 +2006,7 @@ body {
     }
   }
   .border-imei {
-    width: 63%!important;
+    width: 77%!important;
   }
 
 }
@@ -2062,7 +2062,7 @@ body {
     }
   }
   .border-imei {
-    width: 78%!important;
+    width: 95%!important;
     margin-bottom: 3rem;
   }
 }
@@ -2131,7 +2131,7 @@ body {
     }
   }
   .border-imei {
-    width: 78%!important;
+    width: 95%!important;
     margin-bottom: 3rem;
   }
   
@@ -2411,7 +2411,7 @@ body {
     }
   }
   .border-imei {
-    width: 49%!important;
+    width: 59%!important;
   }
 
 }
@@ -2870,7 +2870,7 @@ body {
     }
   }
   .border-imei {
-    width: 66%!important;
+    width: 81%!important;
   }
 }
 
@@ -3069,5 +3069,11 @@ body {
   }
   .mt-10{
     margin-top: 10rem!important;
+  }
+  .mt-Rn4{
+    margin-top: -4rem!important;
+  }
+  .d-flexResp{
+    display: flex !important;
   }
 }

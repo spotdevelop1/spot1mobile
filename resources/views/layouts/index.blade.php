@@ -76,7 +76,7 @@ https://templatemo.com/tm-573-eduwell
                         <li class="{{(request () -> is ('/')) ? 'btn-enalce': ''}}"><a href="/" class="h-color {{(request () -> is ('/')) ? 'active': ''}} style-text">Inicio</a></li>
                         <li class="{{(request () -> is ('recarga')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('recarga')!!}" class="h-color {{(request () -> is ('recarga')) ? 'active': ''}} style-text">Recargas</a></li>
                         <li class="{{(request () -> is ('planes')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('planes')!!}" class="h-color {{(request () -> is ('planes')) ? 'active': ''}} style-text">Paquetes</a></li>
-                        <li class="{{(request () -> is ('imei')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('imei')!!}" class="h-color {{(request () -> is ('imei')) ? 'active': ''}} style-text">Imei</a></li>
+                        <li class="{{(request () -> is ('consult-imei')) ? 'btn-enalce': ''}}"><a href="{!! URL::to('consult-imei')!!}" class="h-color {{(request () -> is ('consult-imei')) ? 'active': ''}} style-text">Valida tu Imei</a></li>
                     </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>

@@ -11,6 +11,17 @@ use Illuminate\Support\Facades\Http;
 
 class RechargeController extends Controller
 {
+    public function accessTokenRequestPost(){
+        // $prelaunch = 'WkdwVUlkVHVQQVdUQ0JxSlpHNjllS2ljNlNyVjRocXg6eUtuSGhMZVVFc0doU1psWA==';
+        $production = 'NWlQY2EzZXdnd1NRTG42WGFrMGhaSGlIS0pHTmhJdmU6MTFGaUVHSGFIUG83SDRoWA==';
+
+        $response = Http::withHeaders([
+            'Authorization' => 'Basic '.$production
+        ])->post('https://altanredes-prod.apigee.net/v1/oauth/accesstoken?grant-type=client_credentials', [
+            'Authorization' => 'Basic '.$production,
+        ]);
+        return $response->json();
+    }
 
     public function recharge(Request $request){
         // return $request;
@@ -53,14 +64,34 @@ class RechargeController extends Controller
         return view('pages.commerce', $data);
     }
 
+    public function imei(Request $request){
+        $imei =  $request->get('imei');
+        // return $imei;
+
+        $accessTokenResponse = RechargeController::accessTokenRequestPost();
+        
+        if($accessTokenResponse['status'] == 'approved'){
+
+            $accessToken = $accessTokenResponse['accessToken'];
+
+            $url_production = 'https://altanredes-prod.apigee.net/ac/v1/imeis/'.$imei.'/status';
+                    
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer '.$accessToken
+            ])->get($url_production);
+
+            return $response->json();
+        } else{
+            $errorCode = $response['errorCode'];
+            $description = $response['description'];
+            $bool = 0;
+            return response()->json(['bool' => $bool,'errorCode' => $errorCode, 'description' => $description]);
+        }
+
+    }
+
 
     public function rechargeAll(Request $request){
-
-        // $response = HTTP::get('https://apps-ws.spot1.mx/getAllRates');
-        // $responseData = $response->json();
-            
-        // $data['offers'] = $responseData['offers'];
-        
 
         return view('pages.recharge');
     }

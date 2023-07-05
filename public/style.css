@@ -1456,18 +1456,21 @@ button.close {
 .border-imei{
   border: 2px solid #3d4f92;
   border-radius: 2rem;
-  width: 55%;
+  width: 66%;
   padding: 0.1rem;
 }
 
 .border-imeiRes{
   border: 2px solid #3d4f92;
   border-radius: 2rem;
-  width: 20rem;
+  width: 24rem;
   padding: 0.1rem;
 }
 .ml-1{
   margin-left: 0.5rem;
+}
+.ml-01{
+  margin-left: 0.1rem;
 }
 
 /*## ESTILOS DE LALO FIN##*/

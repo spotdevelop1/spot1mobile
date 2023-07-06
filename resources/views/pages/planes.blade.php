@@ -37,7 +37,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -66,7 +66,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -96,7 +96,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -143,7 +143,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -178,7 +178,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -213,7 +213,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -243,7 +243,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -278,7 +278,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -323,7 +323,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -357,7 +357,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -391,7 +391,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -420,7 +420,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -449,7 +449,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -483,7 +483,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -517,7 +517,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">

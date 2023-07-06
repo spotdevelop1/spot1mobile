@@ -36,13 +36,14 @@
                         </div>
                         <form  method="POST" id="dataImei" >
 
-                            <div class="d-none d-sm-block">
+                            <div class="">
                                 <div class="d-flex flex-row">
                                     <div class="p-2">
                                         <h3 class="style-text w900 h5">Digita tu código IMEI:</h3>
                                     </div>
-                                    <div class="border-imei">
-                                        <div class="d-flex flex-row mt-2 " style="padding: 0.3rem;">
+                                    <div class="mt-2 ml-1">
+                                        <input type="text" id="input1" value="" class="w-100 input1 border-imei text-center" maxlength="15" onkeypress='return validaNumericos(event)'>
+                                        <!-- <div class="d-flex flex-row mt-2 " style="padding: 0.3rem;">
                                             <input type="text" id="input1" value="" class="w-1 border-none ml-1 input1" maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) input2.focus()">
                                             <input type="text" id="input2" value="" class="w-1 border-none ml-1 input1"maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) input3.focus()">
                                             <input type="text" id="input3" value="" class="w-1 border-none ml-1 input1" maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) input4.focus()">
@@ -58,20 +59,21 @@
                                             <input type="text" id="input13" value="" class="w-1 border-none ml-1 input1" maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) input14.focus()">
                                             <input type="text" id="input14" value="" class="w-1 border-none ml-1 input1" maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) input15.focus()">
                                             <input type="text" id="input15" value="" class="w-1 border-none ml-1 input1" maxlength="1">
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
 
                             {{--  Responsivo  --}}
-                            <div class="container d-sm-none d-md-block d-md-none d-lg-block d-lg-none d-xl-block d-xl-none">
+                            <!-- <div class="container d-sm-none d-md-block d-md-none d-lg-block d-lg-none d-xl-block d-xl-none">
                                 <div class="row">
                                     <div class="col">
                                         <h3 class="style-text w900 h5">Digita tu código IMEI:</h3>
                                     </div>
                                     <div class="w-100"></div>
                                     <div class="col d-flex justify-content-center">
-                                    <div class="border-imeiRes">
+                                    <div>
+                                        <input type="text" id="inputR1" value="" class="w-100 input1 border-imeiRes text-center " maxlength="15" onkeypress='return validaNumericos(event)'>
                                         <div class="d-flex flex-row mt-1 " style="padding: 0.3rem;">
                                             <input type="text" id="inputR1" value="" class="w-1 border-none ml-01 input1" maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) inputR2.focus()">
                                             <input type="text" id="inputR2" value="" class="w-1 border-none ml-01 input1"maxlength="1" onkeyup="if (this.value.length == this.getAttribute('maxlength')) inputR3.focus()">
@@ -92,7 +94,7 @@
                                     </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             {{--  Responsivo  --}}
 
                             <div class="mt-2 p-3">
@@ -175,19 +177,23 @@
 <script>
     $('#formImei').click(function() {
         // $('#modalImei').modal('show'); return false;
-        var input1 = $('.input1');
-        let imeiConcat="";
-        for (let i=0; i < input1.length; i++){
-            let numberImei = input1[i].value;
-            imeiConcat += String(numberImei);
 
-        }
-        let imei = imeiConcat;
+        // var input1 = $('.input1');
+        var imei = $('.input1').val();
+        // console.log(imei); return false;
+
+        // let imeiConcat="";
+        // for (let i=0; i < input1.length; i++){
+        //     let numberImei = input1[i].value;
+        //     imeiConcat += String(numberImei);
+
+        // }
+        // let imei = imeiConcat;
 
         if(imei.length != 15){
             Swal.fire({
                 icon: 'error',
-                title: 'Campos vacíos',
+                title: 'Campo incompleto',
                 text: 'Ingresa los 15 digitos de tu IMEI',
             })
         }else {
@@ -268,6 +274,15 @@
         }
 
     });
+</script>
+
+<script>
+    function validaNumericos(event) {
+    if(event.charCode >= 48 && event.charCode <= 57){
+      return true;
+     }
+     return false;        
+    }
 </script>
 
 <script>

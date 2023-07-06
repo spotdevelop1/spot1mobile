@@ -1841,7 +1841,7 @@ body {
     }
   }
   .border-imei {
-    width: 77%!important;
+    width: 100%!important;
   }
 }
 
@@ -1906,7 +1906,7 @@ body {
     }
   }
   .border-imei {
-    width: 77%!important;
+    width: 100%!important;
   }
 
 }
@@ -2006,7 +2006,7 @@ body {
     }
   }
   .border-imei {
-    width: 77%!important;
+    width: 100%!important;
   }
 
 }
@@ -2410,8 +2410,11 @@ body {
         margin-left: 1rem !important;
     }
   }
-  .border-imei {
+  /* .border-imei {
     width: 59%!important;
+  } */
+  .border-imei {
+    width: 100%!important;
   }
 
 }
@@ -2869,8 +2872,11 @@ body {
         margin-left: 1rem !important;
     }
   }
-  .border-imei {
+  /* .border-imei {
     width: 81%!important;
+  } */
+  .border-imei {
+    width: 100%!important;
   }
 }
 
@@ -3075,5 +3081,11 @@ body {
   }
   .d-flexResp{
     display: flex !important;
+  }
+  .h7{
+    font-size: 0.6rem!important;
+  }
+  .border-imei {
+    width: 10rem!important;
   }
 }

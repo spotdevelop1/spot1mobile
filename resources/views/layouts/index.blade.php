@@ -124,7 +124,7 @@ https://templatemo.com/tm-573-eduwell
             </ul>
           </div>
 
-          <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0 col p-4 mt-5 col-m-foot-6 d-none d-sm-block respCol-lg-3">
+          <div class="col-md-3 col-lg-2 pl-lg-5 mb-4 mb-md-0 col p-4 mt-5 col-m-foot-6 d-none d-sm-block respCol-lg-3">
             <ul class="list-unstyled">
               <li><a href="{!! URL::to('/')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Inicio</a></li>
               <li><a href="{!! URL::to('planes')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Recargas</a></li>
@@ -134,10 +134,18 @@ https://templatemo.com/tm-573-eduwell
 
           <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0 col p-4 mt-5 col-m-foot-6 d-none d-sm-block respCol-lg-3">
             <ul class="list-unstyled">
-              <li><a href="{!! URL::to('legales')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Legales</a></li>
+              <li><a href="{{asset('legales/ColaboracionConLaJusticia.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Colaboración con la Justicia</a></li>
               <li><a href="{!! URL::to('mapa')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Cobertura</a></li>
-              <li><a href="{!! URL::to('recarga')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
-              <li><a href="{!! URL::to('recarga')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Términos y Condiciones</a></li>
+              <li><a href="{{asset('avisoPrivacidad/AvisoDePrivacidadSpot1mobile.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
+              <li><a href="" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Terminos y Condiciones</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0 col p-4 mt-5 col-m-foot-6 d-none d-sm-block respCol-lg-3">
+            <ul class="list-unstyled">
+              <li><a href="{{asset('derechoMinimo/CartaDerechosMinimos.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Carta Derechos Minimos </a></li>
+              <li><a href="{{asset('comercialesS1M/CodigoDePracticasComercialesS1M.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Código de Prácticas Comerciales S1M</a></li>
+              <li><a href="{{asset('condiciones/CondicionesDeUsoDelServicio.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Condiciones de uso del Servicio</a></li>
             </ul>
           </div>
         </div>
@@ -166,12 +174,19 @@ https://templatemo.com/tm-573-eduwell
             </ul>
           </div>
 
+          <div class="p-4 d-sm-none">
+            <ul class="list-unstyled">
+              <li><a href="{{asset('legales/ColaboracionConLaJusticia.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Colaboración con la Justicia</a></li>
+              <li><a href="{!! URL::to('mapa')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Cobertura</a></li>
+              <li><a href="{{asset('avisoPrivacidad/AvisoDePrivacidadSpot1mobile.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
+            </ul>
+          </div>
+
           <div class="p-4 d-sm-none mb-5">
             <ul class="list-unstyled">
-              <li><a href="{!! URL::to('legales')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Legales</a></li>
-              <li><a href="{!! URL::to('mapa')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Cobertura</a></li>
-              <li><a href="{!! URL::to('recarga')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
-              <li><a href="{!! URL::to('recarga')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Términos y Condiciones</a></li>
+              <li><a href="{{asset('derechoMinimo/CartaDerechosMinimos.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Carta Derechos Minimos</a></li>
+              <li><a href="{{asset('comercialesS1M/CodigoDePracticasComercialesS1M.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Código de Prácticas Comerciales S1M</a></li>
+              <li><a href="{{asset('condiciones/CondicionesDeUsoDelServicio.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Condiciones de uso del Servicio</a></li>
             </ul>
           </div>
           <!-- Response -->

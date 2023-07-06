@@ -199,7 +199,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -226,7 +226,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -254,7 +254,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -293,7 +293,7 @@
               </ul>
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -320,7 +320,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -352,7 +352,7 @@
               </ul>
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -384,7 +384,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -411,7 +411,7 @@
               <hr class="hr-basico">
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -443,7 +443,7 @@
               </ul>
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -475,7 +475,7 @@
               </ul>
 
               <div class="action-button">
-                <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
               </div>
 
               <div class="mt-7">
@@ -509,7 +509,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -538,7 +538,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -568,7 +568,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -616,7 +616,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -651,7 +651,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -686,7 +686,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -716,7 +716,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -751,7 +751,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB2 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -797,7 +797,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -831,7 +831,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -865,7 +865,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -894,7 +894,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -923,7 +923,7 @@
                   <hr class="hr-basico">
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -957,7 +957,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -991,7 +991,7 @@
                   </ul>
     
                   <div class="action-button">
-                    <button href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">A TAN SOLO:</button>
+                    <a href="{!! URL::to('recarga')!!}" class="btn btn-main-rounded btn-priceB3 style-text w800">Ir</a>
                   </div>
     
                   <div class="mt-7">
@@ -1016,182 +1016,6 @@
       <div class="col-12 p-3">
         <p class="text-center h5 w500 color-terminos">*Consulta Términos y Condiciones aquí Las velocidades comunicadas son Megas (Mbps) y/o Giga (Gbps) y coresponden a la velocidad máxima de transferencia de datos de bajada ofrecida y alcanzable; la velocidad de bajada y subida puede variar. </p>
       </div>
-      
-        <!-- <div class="col-lg-12">
-          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
-            <div class="item">
-              <div class="pricing-table text-center feature_item font-color">
-                <div class="title">
-                  <h3 class="texto-principal style-text w500">Básico</h3>
-                </div>
-
-                <div class="price color-basico d-flex flex-row">
-                    <div class="col-sm tarjeta-paquete">
-                      <img src="{{asset('images/280.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                    </div>
-                    <div class="col-sm mes-paquete">
-                      <p class="color-priceB animate__animated animate__heartBeat animate__infinite style-text w400">/ Mes</p>
-                    </div> 
-                </div>
-
-                <ul class="feature-list">
-                  <li class="style-text w500">1 Mb Subida</li>
-                  <li class="style-text w500">5 Mb Bajada</li>
-                  <li class="style-text w500">Instalación GRATIS</li>
-                  <li class="resticciones style-text w200">* aplican restricciones</li>
-                  <hr class="hr-basico">
-                </ul>
-                <div class="action-button">
-                  <a href="" class="btn btn-main-rounded btn-priceB style-text w800">¡Lo quiero!</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="pricing-table featured text-center font-color">
-                <div class="title">
-                  <h3 class="texto-principal style-text w500">Ideal</h3>
-                </div>
-
-                <div class="price color-ideal d-flex flex-row">
-                  <div class="col-sm tarjeta-paquete">
-                    <img src="{{asset('images/320.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                  </div>
-                  <div class="col-sm mes-paquete">
-                    <p class="color-priceB animate__animated animate__heartBeat animate__infinite style-text w400">/ Mes</p>
-                  </div> 
-                </div>
-
-                <ul class="feature-list">
-                  <li class="style-text w500">A2 Mb Subida</li>
-                  <li class="style-text w500">10 Mb Bajada</li>
-                  <li class="style-text w500">Instalación GRATIS</li>
-                  <li class="resticciones style-text w200">* aplican restricciones</li>
-                </ul>
-                <hr class="hr-ideal">
-                <div class="action-button">
-                  <a href="" class="btn btn-main-rounded btn-priceI style-text w800">¡Lo quiero!</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="pricing-table text-center feature_item font-color">
-                <div class="title">
-                  <h3 class="texto-principal style-text w500">Plus</h3>
-                </div>
-
-                <div class="price color-plus d-flex flex-row">
-                  <div class="col-sm tarjeta-paquete">
-                    <img src="{{asset('images/360.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                  </div>
-                  <div class="col-sm mes-paquete">
-                    <p class="color-priceB animate__animated animate__heartBeat animate__infinite style-text w400">/ Mes</p>
-                  </div> 
-                </div>
-
-                <ul class="feature-list">
-                  <li class="style-text w500">5 Mb Subida</li>
-                  <li class="style-text w500">15 Mb Bajada</li>
-                  <li class="style-text w500">Instalación GRATIS</li>
-                  <li class="resticciones style-text w200">* aplican restricciones</li>
-                </ul>
-                <hr class="hr-plus">
-                <div class="action-button">
-                  <a href="" class="btn btn-main-rounded btn-priceP style-text w800">¡Lo quiero!</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>   -->
-      
-
-        <!-- <div class="row ps-5" style="justify-content: center;">
-          <div class="w-auto">
-            <div class="pricing-table text-center feature_item font-color">
-              <div class="title">
-                <h3 class="texto-principal">Basico</h3>
-              </div>
-
-              <div class="price color-basico d-flex flex-row">
-                  <div class="col-sm tarjeta-paquete">
-                    <img src="{{asset('images/280.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                  </div>
-                  <div class="col-sm mes-paquete">
-                    <p class="color-priceB animate__animated animate__heartBeat animate__infinite">/ Mes</p>
-                  </div> 
-              </div>
-
-              <ul class="feature-list">
-                <li>1 Mb Subida</li>
-                <li>5 Mb Bajada</li>
-                <li>Instalación GRATIS</li>
-                <li class="resticciones">* aplican restricciones</li>
-                <hr class="hr-basico">
-              </ul>
-              <div class="action-button">
-                <a href="https://api.whatsapp.com/send?phone=526144713178&text=Quiero%20saber%20mas%20del%20internet%20de%20spot%20uno%20Plan%20IDEAL" class="btn btn-main-rounded btn-priceB">Adquirir</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-auto">
-            <div class="pricing-table featured text-center font-color">
-              <div class="title">
-                <h3 class="texto-principal">Ideal</h3>
-              </div>
-
-              <div class="price color-ideal d-flex flex-row">
-                <div class="col-sm tarjeta-paquete">
-                  <img src="{{asset('images/320.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                </div>
-                <div class="col-sm mes-paquete">
-                  <p class="color-priceB animate__animated animate__heartBeat animate__infinite">/ Mes</p>
-                </div> 
-              </div>
-
-              <ul class="feature-list">
-                <li>A2 Mb Subida</li>
-                <li>10 Mb Bajada</li>
-                <li>Instalación GRATIS</li>
-                <li class="resticciones">* aplican restricciones</li>
-              </ul>
-              <hr class="hr-ideal">
-              <div class="action-button">
-                <a href="https://api.whatsapp.com/send?phone=526144713178&text=Quiero%20saber%20mas%20del%20internet%20de%20spot%20uno%20Plan%20IDEAL" class="btn btn-main-rounded btn-priceI">Adquirir</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-auto">
-            <div class="pricing-table text-center feature_item font-color">
-              <div class="title">
-                <h3 class="texto-principal">Plus</h3>
-              </div>
-
-              <div class="price color-plus d-flex flex-row">
-                <div class="col-sm tarjeta-paquete">
-                  <img src="{{asset('images/360.png')}}" alt="Banner secundario" class="w-100 mx-auto d-block img-basico">
-                </div>
-                <div class="col-sm mes-paquete">
-                  <p class="color-priceB animate__animated animate__heartBeat animate__infinite">/ Mes</p>
-                </div> 
-              </div>
-
-              <ul class="feature-list">
-                <li>5 Mb Subida</li>
-                <li>15 Mb Bajada</li>
-                <li>Instalación GRATIS</li>
-                <li class="resticciones">* aplican restricciones</li>
-              </ul>
-              <hr class="hr-plus">
-              <div class="action-button">
-                <a href="https://api.whatsapp.com/send?phone=526144713178&text=Quiero%20saber%20mas%20del%20internet%20de%20spot%20uno%20Plan%20IDEAL" class="btn btn-main-rounded btn-priceP">Adquirir</a>
-              </div>
-            </div>
-          </div>
-        </div> -->
     </div>
   </section>
 
@@ -1224,7 +1048,7 @@
     </div>
   </section>
 
-  <section class="pricing bg-shape" style="background-color: #f5f5f5;">
+  <!-- <section class="pricing bg-shape" style="background-color: #f5f5f5;">
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -1249,7 +1073,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="simple-cta">
     <div>
@@ -1290,16 +1114,16 @@
   <section class="m-informacion">
     <div class="d-flex justify-content-lg-center">
       <div class="p-2">
-        <a class="h6 text-uppercase nav-informacion style-text w600">Aviso de privacidad/</a>
+        <a class="h6 h7 text-uppercase nav-informacion style-text w600" href="{{asset('avisoPrivacidad/AvisoDePrivacidadSpot1mobile.pdf')}}" target="_blank">Aviso de privacidad/</a>
       </div>
       <div class="p-2">
-        <a class="h6 text-uppercase nav-informacion style-text w600">Terminos y condiciones/</a>
+        <a class="h6 h7 text-uppercase nav-informacion style-text w600">Terminos y condiciones/</a>
       </div>
       <div class="p-2">
-        <a class="h6 text-uppercase nav-informacion style-text w600">Cobertura/</a>
+        <a href="{!! URL::to('mapa')!!}" target="_blank" class="h6 h7 text-uppercase nav-informacion style-text w600">Cobertura/</a>
       </div>
       <div class="p-2">
-        <a class="h6 text-uppercase nav-informacion style-text w600">Legales</a>
+        <a class="h6 h7 text-uppercase nav-informacion style-text w600" href="{{asset('legales/ColaboracionConLaJusticia.pdf')}}" target="_blank">Colaboración con la Justicia</a>
       </div>
     </div>
   </section>

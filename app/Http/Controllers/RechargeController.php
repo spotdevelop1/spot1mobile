@@ -7,6 +7,8 @@ use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 // use Illuminate\Support\Facades\Request;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Mail;
 
 
 class RechargeController extends Controller
@@ -44,22 +46,11 @@ class RechargeController extends Controller
                 ->select('clients.id')
                 ->get();
         
-
         // return $data['offerData'];
 
         $data['numeroTelefono'] = $numeroTelefono;
         $data['tipoServicio'] = $request->post('tipoServicioInput');
         $data['montoRecarga'] = $request->post('montoRecargaInput');
-
-
-        // $data = [
-        //     'numeroSinEspacio' => $numeroSinEspacio,
-        //     'tipoServicio' => $tipoServicio,
-        //     'montoRecarga' => $montoRecarga
-        // ];
-
-        // return $data;
-
 
         return view('pages.commerce', $data);
     }
@@ -90,11 +81,33 @@ class RechargeController extends Controller
 
     }
 
+    public function newClients(Request $request){
 
-    public function rechargeAll(Request $request){
+        $nombreContacto = $request->get('nombreContacto');
+        $apellidosContacto = $request->get('apellidosContacto');
 
-        return view('pages.recharge');
+        $numeroContacto = $request->get('numeroContacto');
+        $numeroContacto = preg_replace( '/\((\w+)\)/i', "$1", $numeroContacto);
+        $numeroContacto = str_replace( '-', ' ', $numeroContacto);
+        $numeroContacto = preg_replace( '/\s+/i', '', $numeroContacto);
+        $email_remitente = "tremenos05@gmail.com";
+
+        $data= [
+            "subject"=>"REGISTRO DE NUEVO CLIENTE",
+            "nombreContacto" => $nombreContacto,
+            "apellidosContacto" => $apellidosContacto,
+            "numeroContacto"=>$numeroContacto,
+        ];
+   
+        Mail::to($email_remitente)->send(new SendMail($data));
+        return response()->json(['http_code'=>'200','message'=>'Correo enviado...']);
     }
+
+
+    // public function rechargeAll(Request $request){
+
+    //     return view('pages.recharge');
+    // }
 
 
 

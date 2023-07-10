@@ -21,9 +21,9 @@ Route::get('/', function(){
     return View::make('pages.content_index');
 });
 
-// Route::get('/recarga', function(){
-//     return View::make('pages.recharge');
-// });
+Route::get('/recarga', function(){
+    return View::make('pages.recharge');
+});
 
 Route::get('/pago', function(){
     return View::make('pages.commerce');
@@ -46,8 +46,12 @@ Route::post('/recargas', 'RechargeController@recharge')->name('recharges');
 
 Route::get('/imei', 'RechargeController@imei')->name('imei');
 
-Route::get('/recarga', 'RechargeController@rechargeAll')->name('recharge');
+// Route::get('/recarga', 'RechargeController@rechargeAll')->name('recharge');
 
 Route::get('/references', 'OpenPayController@references')->name('references');
+
 Route::post('/referencesOxxo', 'ConektaController@referencesOxxo')->name('referencesOxxo');
+
 Route::post('/paymentStripe','StripeController@paymentStripe')->name('paymentStripe');
+
+Route::get('/newClient', 'RechargeController@newClients')->name('newClient');

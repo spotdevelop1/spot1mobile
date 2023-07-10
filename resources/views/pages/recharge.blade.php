@@ -68,15 +68,48 @@
         <div class="col-12">
           <div class="section-title">
             <div class="header-text mt-5">
-              <h3 class="text-white style-text w500 display-3 font-duda mb-3">Estamos aquí para ayudarte en cada paso del camino</em></h3>
+              <h3 class="text-white style-text w500 display-3 font-duda mb-3">¿Aún no eres cliente?</em></h3>
             </div>
             <div class="header-text mb-n3">
-              <button type="button" class="btn btn-light br-radiu-contacto ">Contáctanos</button>
+              <button type="button" class="btn btn-light br-radiu-contacto " data-toggle="modal" id="cliente">Solicita una línea</button>
             </div>
           </div>
         </div>     
     </div>
   </section>
+
+  <div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-2">
+      <div class="modal-header p-2-2">
+        <h5 class="modal-title text-center style-text w900 color-primario h4" id="exampleModalLabel">Regístrate para ser parte de nuestra comunidad</h5>
+        <button type="button" class="close closeModal_cliente" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body p-5 mt-n1">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control border h-51 rounded-2_8 h17" id="nombreContacto" placeholder="Escribe tu Nombre">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Apellidos:</label>
+            <input type="text" class="form-control border h-51 rounded-2_8 h17" id="apellidosContacto" placeholder="Escribe tus Apellidos">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Número de Contacto:</label>
+            <input type="text" class="form-control border h-51 rounded-2_8 h17" id="numeroContacto">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center gap-5">
+        <button type="button" class="btn btn-danger text-capitalize closeModal_cliente" data-dismiss="modal" >Salir</button>
+        <button type="button" class="btn btn-primary text-capitalize" id="guardarCliente">Registrarse</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <section class="pricing bg-shape" style="background-color: #f5f5f5;">
     <div class="container">
@@ -132,12 +165,6 @@
         </div>
     </div>
 
-
-    {{--  <div class="mt-4">
-      <h2 class="text-white style-text w900 m-5 text-end text-break">Conoce y contrata el mejor servicio de internet en casa</h2>
-    </div>  --}}
-
-
   </section>
 
   <section class="m-informacion">
@@ -159,6 +186,7 @@
 
 <script>
     $('#numeroTelefono').inputmask("(999) 999-9999");
+    $('#numeroContacto').inputmask("(999) 999-9999");
 </script>
 
 <script>
@@ -245,6 +273,58 @@
       }
     })
   })
+</script>
+
+<script>
+  $('#guardarCliente').click(function(){
+    let nombreContacto = $('#nombreContacto').val();
+    let apellidosContacto = $('#apellidosContacto').val();
+    let numeroContacto = $('#numeroContacto').val();
+
+    $.ajax({
+      url: "{{ route('newClient')}}",
+      method: 'GET',
+      data:{
+        nombreContacto,
+        apellidosContacto,
+        numeroContacto
+      },
+      success: function(data){
+        // console.log(data);
+        if(data.http_code == 200){
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'Muchas Felicidades!!',
+            text: 'Tu registro se ha generado y enviado exitosamente.',
+            showConfirmButton: false,
+            timer: 3000
+          });
+          $('input[type="text"]').val('');
+          $('#modalCliente').modal('hide');
+        } else{
+          Swal.fire({
+            position: 'top-center',
+            icon: 'error',
+            title: 'Hubo un error!!',
+            text: 'Tenemos un detalle en enviar tu registro.',
+            showConfirmButton: false,
+            timer: 3000
+          })
+        }
+      }
+    })
+  });
+</script>
+
+<script>
+   $('#cliente').click(function() {
+    $('#modalCliente').modal('show');
+   });
+
+   $('.closeModal_cliente').click(function() {
+    $('#modalCliente').modal('hide');
+   });
 </script>
 
 @endsection

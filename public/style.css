@@ -1473,6 +1473,24 @@ button.close {
   margin-left: 0.1rem;
 }
 
+.p-2-2{
+  padding: 2rem 2rem !important;;
+}
+
+.h-51{
+  height: 50px!important;
+}
+
+.rounded-2{
+  border-radius: 2rem!important;
+}
+.rounded-2_8{
+  border-radius: 2.8rem!important;
+}
+.h17{
+  font-size: 17px!important;
+}
+
 /*## ESTILOS DE LALO FIN##*/
 
 h1, h2, h3, h4, h5, h6 {

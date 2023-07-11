@@ -90,7 +90,7 @@ class RechargeController extends Controller
         $numeroContacto = preg_replace( '/\((\w+)\)/i', "$1", $numeroContacto);
         $numeroContacto = str_replace( '-', ' ', $numeroContacto);
         $numeroContacto = preg_replace( '/\s+/i', '', $numeroContacto);
-        $email_remitente = "tremenos05@gmail.com";
+        $email_remitente = "spotmobileuno@gmail.com";
 
         $data= [
             "subject"=>"REGISTRO DE NUEVO CLIENTE",

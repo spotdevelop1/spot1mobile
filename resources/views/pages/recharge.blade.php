@@ -281,37 +281,58 @@
     let apellidosContacto = $('#apellidosContacto').val();
     let numeroContacto = $('#numeroContacto').val();
 
-    $.ajax({
-      url: "{{ route('newClient')}}",
-      method: 'GET',
-      data:{
-        nombreContacto,
-        apellidosContacto,
-        numeroContacto
+    let timerInterval
+    Swal.fire({
+      title: 'Espere un momento, su mensaje se está enviando.',
+      html: 'Al finalizar se mostrará en pantalla un mensaje de Muchas Felicidades!!.',
+      timer: 8000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+        const b = Swal.getHtmlContainer().querySelector('b')
+        timerInterval = setInterval(() => {
+          // b.textContent = Swal.getTimerLeft()
+        }, 100)
       },
-      success: function(data){
-        // console.log(data);
-        if(data.http_code == 200){
-          Swal.fire({
-            position: 'top-center',
-            icon: 'success',
-            title: 'Muchas Felicidades!!',
-            text: 'Tu registro se ha generado y enviado exitosamente.',
-            showConfirmButton: false,
-            timer: 3000
-          });
-          $('input[type="text"]').val('');
-          $('#modalCliente').modal('hide');
-        } else{
-          Swal.fire({
-            position: 'top-center',
-            icon: 'error',
-            title: 'Hubo un error!!',
-            text: 'Tenemos un detalle en enviar tu registro.',
-            showConfirmButton: false,
-            timer: 3000
-          })
-        }
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      /* Read more about handling dismissals below */
+      if (result.dismiss === Swal.DismissReason.timer) {
+        $.ajax({
+          url: "{{ route('newClient')}}",
+          method: 'GET',
+          data:{
+            nombreContacto,
+            apellidosContacto,
+            numeroContacto
+          },
+          success: function(data){
+            // console.log(data);
+            if(data.http_code == 200){
+              Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Muchas Felicidades!!',
+                text: 'Tu registro se ha generado y enviado exitosamente.',
+                showConfirmButton: false,
+                timer: 3000
+              });
+              $('input[type="text"]').val('');
+              $('#modalCliente').modal('hide');
+            } else{
+              Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'Hubo un error!!',
+                text: 'Tenemos un detalle en enviar tu registro.',
+                showConfirmButton: false,
+                timer: 3000
+              })
+            }
+          }
+        })
       }
     })
   });

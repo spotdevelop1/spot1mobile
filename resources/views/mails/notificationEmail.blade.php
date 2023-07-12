@@ -13,7 +13,7 @@
         <div class="card">
             <div class="card-body col-md-12">
             <h4 class="card-title">Hola equipo SpotUno</h4>
-                <p class="card-text">Se ha registrado un nuevo cliente <br> <strong>Nombre:</strong> {{$nombreContacto}} <br> <strong>Apellidos:</strong> {{$apellidosContacto}}<br>
+                <p class="card-text">Prospecto cliente <br> <strong>Nombre:</strong> {{$nombreContacto}} <br> <strong>Apellidos:</strong> {{$apellidosContacto}}<br>
                 <strong>Número de Teléfono: </strong>{{$numeroContacto}}<br>
             </div>
             </div>

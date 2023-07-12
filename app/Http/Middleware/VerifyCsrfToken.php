@@ -15,6 +15,6 @@ class VerifyCsrfToken extends Middleware
         //
         '/recargas',
         '/referencesOxxo',
-        '/newClient'
+        '/existClient'
     ];
 }

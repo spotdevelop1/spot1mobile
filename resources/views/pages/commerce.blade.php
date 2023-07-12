@@ -22,11 +22,10 @@
               <div class="col-lg-12">
                 <div class="menu">
                   {{--  <div class="active referenceSpot" data-bs-toggle="modal" data-bs-target="#exampleModal">  --}}
-                  <div class="active referenceSpotOxxo">
+                  <!-- <div class="active referenceSpotOxxo">
                     <img src="{{asset('images/oxxo.png')}}" alt="Oxxo">
                     <h4>OXXO</h4>
-                    <!-- <span>CEO-FOUNDER</span> -->
-                  </div>
+                  </div> -->
                   <div class="referenceSpot">
                     <img src="{{asset('images/walmart.png')}}" alt="walmart">
                     <h4>WALMART</h4>

@@ -46,7 +46,7 @@ Route::post('/recargas', 'RechargeController@recharge')->name('recharges');
 
 Route::get('/imei', 'RechargeController@imei')->name('imei');
 
-// Route::get('/recarga', 'RechargeController@rechargeAll')->name('recharge');
+Route::post('/existClient', 'RechargeController@existClient')->name('existClient');
 
 Route::get('/references', 'OpenPayController@references')->name('references');
 

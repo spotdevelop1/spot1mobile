@@ -93,7 +93,7 @@ class RechargeController extends Controller
         $email_remitente = "spotmobileuno@gmail.com";
 
         $data= [
-            "subject"=>"REGISTRO DE NUEVO CLIENTE",
+            "subject"=>"PROSPECTO CLIENTE",
             "nombreContacto" => $nombreContacto,
             "apellidosContacto" => $apellidosContacto,
             "numeroContacto"=>$numeroContacto,
@@ -104,10 +104,14 @@ class RechargeController extends Controller
     }
 
 
-    // public function rechargeAll(Request $request){
-
-    //     return view('pages.recharge');
-    // }
+    public function existClient(Request $request){
+        $numeroTelefono = $request->post('numeroSinEspacio');
+        
+        $clientNumber = DB::table('clients')
+        ->where('clients.cellphone', $numeroTelefono)
+        ->exists();
+        return $clientNumber;
+    }
 
 
 

@@ -200,8 +200,6 @@
         var tipoServicio = $('#typeService').val();
         var montoRecarga = $('#montoRecarga').val();
 
-
-
         if(numeroSinEspacio == ""){
             return Swal.fire({
                 icon: 'error',
@@ -224,27 +222,46 @@
                 timer: 2000
             });
         } else{
-            $('#tipoServicioInput').val(tipoServicio);
-            $('#montoRecargaInput').val(montoRecarga);
+          $.ajax({
+          url:"{{ route('existClient')}}",
+          method:"POST",
+          data:{
+            numeroSinEspacio
+          },
+          success: function(data){
+            // console.log(data); return false;
+            if(data == 1){
+              $('#tipoServicioInput').val(tipoServicio);
+              $('#montoRecargaInput').val(montoRecarga);
 
-            Swal.fire({
-                title: '¿La recarga seleccionada con número '+ numeroSinEspacio +' es correcto?',
-                showCancelButton: true,
-                confirmButtonText: 'SI, ES CORRECTO',
-                confirmButtonColor: '#0a4f97',
-                }).then((result) => {
+              Swal.fire({
+                  title: '¿La recarga seleccionada con número '+ numeroSinEspacio +' es correcto?',
+                  showCancelButton: true,
+                  confirmButtonText: 'SI, ES CORRECTO',
+                  confirmButtonColor: '#0a4f97',
+                  }).then((result) => {
 
-                if (result.isConfirmed) {
-                    $('#formPago').submit();
-                } else{
-                    Swal.fire({
-                        icon: 'info',
-                        title: 'Operación Cancelada',
-                        timer: 2000,
-                        showConfirmButton: false
-                    });
-                }
-            });
+                  if (result.isConfirmed) {
+                      $('#formPago').submit();
+                  } else{
+                      Swal.fire({
+                          icon: 'info',
+                          title: 'Operación Cancelada',
+                          timer: 2000,
+                          showConfirmButton: false
+                      });
+                  }
+              });
+            } else{
+              Swal.fire({
+                icon: 'error',
+                title: 'Número no encontrado',
+                text: 'El numero que ingreso no se encuetra en nuestra base de datos, compruebe su número',
+
+              })
+            }
+          }
+        })
         }
     });
 

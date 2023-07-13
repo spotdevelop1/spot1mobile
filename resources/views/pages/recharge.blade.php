@@ -229,7 +229,8 @@
             numeroSinEspacio
           },
           success: function(data){
-            // console.log(data); return false;
+            console.log(data); return false;
+            {{--  console.log(data.responseSubscriber.status.subStatus); return false;  --}}
             if(data == 1){
               $('#tipoServicioInput').val(tipoServicio);
               $('#montoRecargaInput').val(montoRecarga);

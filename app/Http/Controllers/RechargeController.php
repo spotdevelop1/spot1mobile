@@ -107,13 +107,25 @@ class RechargeController extends Controller
     public function existClient(Request $request){
         $numeroTelefono = $request->post('numeroSinEspacio');
         
-        $clientNumber = DB::table('clients')
-        ->where('clients.cellphone', $numeroTelefono)
-        ->exists();
-        return $clientNumber;
+        // $clientNumber = DB::table('clients')
+        // ->where('clients.cellphone', $numeroTelefono)
+        // ->exists();
+        // return $clientNumber;
+
+
+        $accessTokenResponse = RechargeController::accessTokenRequestPost();
+
+        if($accessTokenResponse['status'] == 'approved'){
+            $accessToken = $accessTokenResponse['accessToken'];
+            
+            $url_production = 'https://altanredes-prod.apigee.net/cm/v1/subscribers/'.$numeroTelefono.'/profile';
+                    
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer '.$accessToken
+            ])->get($url_production);
+
+            return $response->json();
+        }
     }
-
-
-
    
 }

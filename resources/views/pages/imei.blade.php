@@ -175,105 +175,172 @@
 </section>
 
 <script>
-    $('#formImei').click(function() {
-        // $('#modalImei').modal('show'); return false;
+  $('#formImei').click(function() {
+    // $('#modalImei').modal('show'); return false;
 
-        // var input1 = $('.input1');
-        var imei = $('.input1').val();
-        // console.log(imei); return false;
+    // var input1 = $('.input1');
+    var imei = $('.input1').val();
+    // console.log(imei); return false;
 
-        // let imeiConcat="";
-        // for (let i=0; i < input1.length; i++){
-        //     let numberImei = input1[i].value;
-        //     imeiConcat += String(numberImei);
+    // let imeiConcat="";
+    // for (let i=0; i < input1.length; i++){
+    //     let numberImei = input1[i].value;
+    //     imeiConcat += String(numberImei);
 
-        // }
-        // let imei = imeiConcat;
+    // }
+    // let imei = imeiConcat;
 
-        if(imei.length != 15){
-            Swal.fire({
-                icon: 'error',
-                title: 'Campo incompleto',
-                text: 'Ingresa los 15 digitos de tu IMEI',
-            })
-        }else {
-
+      if(imei.length != 15){
+          Swal.fire({
+              icon: 'error',
+              title: 'Campo incompleto',
+              text: 'Ingresa los 15 digitos de tu IMEI',
+          })
+      }
+      else{
+        $.ajax({
+          url: "{{ route('imei')}}",
+          method: 'GET',
+          data:{
+            imei,
+          },
+          beforeSend: function() {
             let timerInterval
             Swal.fire({
-            title: 'Espere un momento',
-            html: 'Estamos validando su IMEI.',
-            timer: 5500,
-            timerProgressBar: true,
-            didOpen: () => {
-                Swal.showLoading()
-                const b = Swal.getHtmlContainer().querySelector('b')
-                timerInterval = setInterval(() => {
-                b.textContent = Swal.getTimerLeft();
-                }, 100)
-            },
-            willClose: () => {
-                clearInterval(timerInterval)
-            }
-            }).then((result) => {
-            /* Read more about handling dismissals below */
-            if (result.dismiss === Swal.DismissReason.timer) {
-                $.ajax({
-                url: "{{ route('imei')}}",
-                method: 'GET',
-                data:{
-                    imei,
-                 },
-                success: function(data){
-                    // console.log(data);
-                    // console.log(data.imei)
-                    
-                    if(data.errorCode == 400){
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Error 400',
-                            text: 'No se encontró información para el IMEI solicitado',
-                        })
-                    } else{
-                        let homologado = data.imei.homologated;
-                        let imei = data.imei.imei;
-                        let status = data.imei.blocked;
-                        let marca = data.deviceFeatures.brand;
-                        let modelo = data.deviceFeatures.model;
-                        let band28 = data.deviceFeatures.band28;
-                        let volTE = data.deviceFeatures.volteCapable;
-
-                        let infoImei = document.getElementById('imei');
-                        infoImei.innerHTML = imei;
-
-                        let infoBanda28 = document.getElementById('banda28');
-                        infoBanda28.innerHTML = band28;
-
-                        let infoMarca = document.getElementById('marca');
-                        infoMarca.innerHTML = marca;
-
-                        let infoModelo = document.getElementById('modelo');
-                        infoModelo.innerHTML = modelo;
-
-                        let infoVoltE = document.getElementById('volte');
-                        infoVoltE.innerHTML = volTE;
-
-                        let infoStatus = document.getElementById('status');
-                        infoStatus.innerHTML = status;
-
-                        let infoHomolago = document.getElementById('homologado');
-                        infoHomolago.innerHTML = homologado;
-
-                        let infoImeiInfo = document.getElementById('imeiInfo');
-                        infoImeiInfo.innerHTML = imei;
-                        $('#modalImei').modal('show');
-                    }
-                }
-            });
-        }
+              title: 'Espere un momento',
+              html: 'Estamos validando su IMEI.',
+              timerProgressBar: true,
+              didOpen: () => {
+                  Swal.showLoading()
+                  const b = Swal.getHtmlContainer().querySelector('b')
+                  timerInterval = setInterval(() => {
+                  // b.textContent = Swal.getTimerLeft();
+                  }, 100)
+              },
+              willClose: () => {
+                  clearInterval(timerInterval)
+              }
             })
-        }
+          },
+          success: function(data){
+              // console.log(data);
+              // console.log(data.imei)
+              swal.close()
+            if(data.errorCode == 400){
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error 400',
+                    text: 'No se encontró información para el IMEI solicitado',
+                })
+            } else{
+                let homologado = data.imei.homologated;
+                let imei = data.imei.imei;
+                let status = data.imei.blocked;
+                let marca = data.deviceFeatures.brand;
+                let modelo = data.deviceFeatures.model;
+                let band28 = data.deviceFeatures.band28;
+                let volTE = data.deviceFeatures.volteCapable;
 
-    });
+                let infoImei = document.getElementById('imei');
+                infoImei.innerHTML = imei;
+
+                let infoBanda28 = document.getElementById('banda28');
+                infoBanda28.innerHTML = band28;
+
+                let infoMarca = document.getElementById('marca');
+                infoMarca.innerHTML = marca;
+
+                let infoModelo = document.getElementById('modelo');
+                infoModelo.innerHTML = modelo;
+
+                let infoVoltE = document.getElementById('volte');
+                infoVoltE.innerHTML = volTE;
+
+                let infoStatus = document.getElementById('status');
+                infoStatus.innerHTML = status;
+
+                let infoHomolago = document.getElementById('homologado');
+                infoHomolago.innerHTML = homologado;
+
+                let infoImeiInfo = document.getElementById('imeiInfo');
+                infoImeiInfo.innerHTML = imei;
+                $('#modalImei').modal('show');
+            }
+          }
+        });
+
+          // let timerInterval
+          // Swal.fire({
+          // title: 'Espere un momento',
+          // html: 'Estamos validando su IMEI.',
+          // timer: 5500,
+          // timerProgressBar: true,
+          // didOpen: () => {
+          //     Swal.showLoading()
+          //     const b = Swal.getHtmlContainer().querySelector('b')
+          //     timerInterval = setInterval(() => {
+          //     b.textContent = Swal.getTimerLeft();
+          //     }, 100)
+          // },
+          // willClose: () => {
+          //     clearInterval(timerInterval)
+          // }
+          // }).then((result) => {
+          //   if (result.dismiss === Swal.DismissReason.timer) {
+          //       $.ajax({
+          //       url: "{{ route('imei')}}",
+          //       method: 'GET',
+          //       data:{
+          //           imei,
+          //       },
+          //       success: function(data){
+                    
+          //           if(data.errorCode == 400){
+          //               Swal.fire({
+          //                   icon: 'error',
+          //                   title: 'Error 400',
+          //                   text: 'No se encontró información para el IMEI solicitado',
+          //               })
+          //           } else{
+          //               let homologado = data.imei.homologated;
+          //               let imei = data.imei.imei;
+          //               let status = data.imei.blocked;
+          //               let marca = data.deviceFeatures.brand;
+          //               let modelo = data.deviceFeatures.model;
+          //               let band28 = data.deviceFeatures.band28;
+          //               let volTE = data.deviceFeatures.volteCapable;
+
+          //               let infoImei = document.getElementById('imei');
+          //               infoImei.innerHTML = imei;
+
+          //               let infoBanda28 = document.getElementById('banda28');
+          //               infoBanda28.innerHTML = band28;
+
+          //               let infoMarca = document.getElementById('marca');
+          //               infoMarca.innerHTML = marca;
+
+          //               let infoModelo = document.getElementById('modelo');
+          //               infoModelo.innerHTML = modelo;
+
+          //               let infoVoltE = document.getElementById('volte');
+          //               infoVoltE.innerHTML = volTE;
+
+          //               let infoStatus = document.getElementById('status');
+          //               infoStatus.innerHTML = status;
+
+          //               let infoHomolago = document.getElementById('homologado');
+          //               infoHomolago.innerHTML = homologado;
+
+          //               let infoImeiInfo = document.getElementById('imeiInfo');
+          //               infoImeiInfo.innerHTML = imei;
+          //               $('#modalImei').modal('show');
+          //           }
+          //       }
+          //     });
+          //   }
+          // })
+      }
+  });
 </script>
 
 <script>

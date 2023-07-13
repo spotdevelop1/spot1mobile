@@ -41,8 +41,10 @@ class RechargeController extends Controller
                 ->select('rates.description','offers.price_sale','offers.offerID_second')
                 ->get();
 
-        $data['client_id'] = DB::table('clients')
-                ->where('clients.cellphone', $numeroTelefono)
+        $data['client_id'] = DB::table('numbers')
+                ->join('portabilities', 'portabilities.icc', '=', 'numbers.icc_id')
+                ->join('clients', 'clients.id', '=', 'portabilities.client_id')
+                ->where('numbers.MSISDN', $numeroTelefono)
                 ->select('clients.id')
                 ->get();
         

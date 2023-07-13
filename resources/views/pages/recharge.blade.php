@@ -190,81 +190,102 @@
 </script>
 
 <script>
-    $('#formRecargar').click(function() {
+  $('#formRecargar').click(function() {
 
-        var numeroTelefono = $('#numeroTelefono').val();
-        var numeroSinParentesis = numeroTelefono.replace(/\((\w+)\)/g, "$1");
-        var numeroSinGuion = numeroSinParentesis.replace("-", " ")
-        var numeroSinEspacio = numeroSinGuion.replace(/\s+/g, '');
+    var numeroTelefono = $('#numeroTelefono').val();
+    var numeroSinParentesis = numeroTelefono.replace(/\((\w+)\)/g, "$1");
+    var numeroSinGuion = numeroSinParentesis.replace("-", " ")
+    var numeroSinEspacio = numeroSinGuion.replace(/\s+/g, '');
 
-        var tipoServicio = $('#typeService').val();
-        var montoRecarga = $('#montoRecarga').val();
+    var tipoServicio = $('#typeService').val();
+    var montoRecarga = $('#montoRecarga').val();
 
-        if(numeroSinEspacio == ""){
-            return Swal.fire({
-                icon: 'error',
-                title: 'El número de Teléfono es obligatorio.',
-                showConfirmButton: false,
-                timer: 2000
-            });
-        } else if(tipoServicio == null){
-            return Swal.fire({
-                icon: 'error',
-                title: 'Seleccione un Servicio.',
-                showConfirmButton: false,
-                timer: 2000
-            });
-        } else if(montoRecarga == null){
-            return Swal.fire({
-                icon: 'error',
-                title: 'Seleccione un Monto a Recargar.',
-                showConfirmButton: false,
-                timer: 2000
-            });
-        } else{
-          $.ajax({
-          url:"{{ route('existClient')}}",
-          method:"POST",
-          data:{
-            numeroSinEspacio
-          },
-          success: function(data){
-            console.log(data); return false;
-            {{--  console.log(data.responseSubscriber.status.subStatus); return false;  --}}
-            if(data == 1){
+    if(numeroSinEspacio == ""){
+        return Swal.fire({
+            icon: 'error',
+            title: 'El número de Teléfono es obligatorio.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } else if(numeroSinEspacio.length != 10){
+        return Swal.fire({
+            icon: 'error',
+            title: 'Ingrese 10 digitos.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } else if(tipoServicio == null){
+        return Swal.fire({
+            icon: 'error',
+            title: 'Seleccione un Servicio.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } else if(montoRecarga == null){
+        return Swal.fire({
+            icon: 'error',
+            title: 'Seleccione un Monto a Recargar.',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } else{
+      $.ajax({
+        url:"{{ route('existClient')}}",
+        method:"POST",
+        data:{
+          numeroSinEspacio
+        },    
+        beforeSend: function() {
+          let timerInterval
+          Swal.fire({
+            title: 'Un momento por favor.',
+            html: 'Estamos verificando su número',
+            // timer: 2000,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading()
+              const b = Swal.getHtmlContainer().querySelector('b')
+              timerInterval = setInterval(() => {
+                // b.textContent = Swal.getTimerLeft()
+              }, 100)
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+            }
+          })
+        },
+        success: function(data){
+          swal.close()
+          // console.log(data); return false;
+
+          if(data.responseSubscriber){
+            let status = data.responseSubscriber.status.subStatus;
+            // console.log(status);
+            if(status == "Active"){
               $('#tipoServicioInput').val(tipoServicio);
               $('#montoRecargaInput').val(montoRecarga);
-
-              Swal.fire({
-                  title: '¿La recarga seleccionada con número '+ numeroSinEspacio +' es correcto?',
-                  showCancelButton: true,
-                  confirmButtonText: 'SI, ES CORRECTO',
-                  confirmButtonColor: '#0a4f97',
-                  }).then((result) => {
-
-                  if (result.isConfirmed) {
-                      $('#formPago').submit();
-                  } else{
-                      Swal.fire({
-                          icon: 'info',
-                          title: 'Operación Cancelada',
-                          timer: 2000,
-                          showConfirmButton: false
-                      });
-                  }
-              });
-            } else{
-              Swal.fire({
-                icon: 'error',
-                title: 'Número no encontrado',
-                text: 'El numero que ingreso no se encuetra en nuestra base de datos, compruebe su número',
-
-              })
+              $('#formPago').submit();
             }
+          }else if(data.errorCode){
+            let errorCode = data.errorCode;
+            if(errorCode == 1211000305){
+                Swal.fire({
+                  icon: 'error',
+                  title: 'El usuario no existe!',
+                  text: 'El numero ' + numeroSinEspacio + ' que ingreso no existe, compruebe su número',
+                })
+              }
+          }else{
+            Swal.fire({
+              icon: 'error',
+              title: 'Número no encontrado',
+              text: 'El numero que ingreso no se encuetra en nuestra base de datos, compruebe su número',
+            })
           }
-        })
         }
-    });
+      })
+    }
+  });
 
 </script>
 
@@ -299,58 +320,57 @@
     let apellidosContacto = $('#apellidosContacto').val();
     let numeroContacto = $('#numeroContacto').val();
 
-    let timerInterval
-    Swal.fire({
-      title: 'Espere un momento, su mensaje se está enviando.',
-      html: 'Al finalizar se mostrará en pantalla un mensaje de Muchas Felicidades!!.',
-      timer: 8000,
-      timerProgressBar: true,
-      didOpen: () => {
-        Swal.showLoading()
-        const b = Swal.getHtmlContainer().querySelector('b')
-        timerInterval = setInterval(() => {
-          // b.textContent = Swal.getTimerLeft()
-        }, 100)
-      },
-      willClose: () => {
-        clearInterval(timerInterval)
-      }
-    }).then((result) => {
-      /* Read more about handling dismissals below */
-      if (result.dismiss === Swal.DismissReason.timer) {
-        $.ajax({
-          url: "{{ route('newClient')}}",
-          method: 'GET',
-          data:{
-            nombreContacto,
-            apellidosContacto,
-            numeroContacto
+    $.ajax({
+      url: "{{ route('newClient')}}",
+      method: 'GET',
+      data:{
+        nombreContacto,
+        apellidosContacto,
+        numeroContacto
+      },          
+      beforeSend: function() {
+        let timerInterval
+        Swal.fire({
+          title: 'Espere un momento.',
+          html: 'Su mensaje se está enviando..',
+          // timer: 8000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            const b = Swal.getHtmlContainer().querySelector('b')
+            timerInterval = setInterval(() => {
+              // b.textContent = Swal.getTimerLeft()
+            }, 100)
           },
-          success: function(data){
-            // console.log(data);
-            if(data.http_code == 200){
-              Swal.fire({
-                position: 'center',
-                icon: 'success',
-                title: 'Muchas Felicidades!!',
-                text: 'Tu registro se ha generado y enviado exitosamente.',
-                showConfirmButton: false,
-                timer: 3000
-              });
-              $('input[type="text"]').val('');
-              $('#modalCliente').modal('hide');
-            } else{
-              Swal.fire({
-                position: 'top-center',
-                icon: 'error',
-                title: 'Hubo un error!!',
-                text: 'Tenemos un detalle en enviar tu registro.',
-                showConfirmButton: false,
-                timer: 3000
-              })
-            }
+          willClose: () => {
+            clearInterval(timerInterval)
           }
         })
+      },
+      success: function(data){
+        // console.log(data);
+        swal.close()
+        if(data.http_code == 200){
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Muchas Felicidades!!',
+            text: 'Tu registro se ha enviado exitosamente.',
+            showConfirmButton: false,
+            timer: 3000
+          });
+          $('input[type="text"]').val('');
+          $('#modalCliente').modal('hide');
+        } else{
+          Swal.fire({
+            position: 'top-center',
+            icon: 'error',
+            title: 'Hubo un error!!',
+            text: 'Tenemos un detalle en enviar tu registro.',
+            showConfirmButton: false,
+            timer: 3000
+          })
+        }
       }
     })
   });

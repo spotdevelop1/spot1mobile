@@ -104,7 +104,7 @@ https://templatemo.com/tm-573-eduwell
                 </a>
               </li>
               <li class="mt-5">
-                <a href="https://www.facebook.com/spotunochihuahua" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100094553283340" target="_blank">
                   <i class="fa-brands fa-facebook h2 text-white"></i>            
                 </a>
               </li>
@@ -117,6 +117,7 @@ https://templatemo.com/tm-573-eduwell
                 {{--  <li><a href="{!! URL::to('/')!!}" class="py-2 d-block text-white style-text w600">Inicio</a></li>  --}}
                 {{--  <li><a href="{!! URL::to('planes')!!}" class="py-2 d-block text-white style-text w600">Paquetes</a></li>  --}}
                 {{--  <li><a href="{!! URL::to('recarga')!!}" class="py-2 d-block text-white style-text w600">Pago mensualidad</a></li>  --}}
+                <li><a href="https://www.facebook.com/profile.php?id=100094553283340" class="py-2 text-black style-text w600" target="_blank"><i class="fa-brands fa-facebook fc"></i>Facebook</a></li>
                 <li><p class="text-black style-text w600"><i class="fa-solid fa-envelope p-2"></i>E-mail: soporte@spot1mobile.com</p></li>
                 <li><p class="text-black style-text w600"><i class="fa-solid fa-mobile p-2"></i>Teléfono: 614 399 00 92</p></li>
                 <!-- <li><p class="text-black style-text w600"><i class="fa-brands fa-square-whatsapp p-2"></i>Whatsapp: 800 000 0990 o +52 961 876 4758</p></li> -->
@@ -223,7 +224,7 @@ https://templatemo.com/tm-573-eduwell
     </div>
   
     <div>
-      <a class="btn_inovaciones" target="_blank" href="https://www.facebook.com/spotunochihuahua">
+      <a class="btn_inovaciones" target="_blank" href="https://www.facebook.com/profile.php?id=100094553283340">
         <i class="fa-brands fa-facebook spt-nav"></i>
         <span class="style-text w600 tbbar-texto">Facebook</span>
       </a>

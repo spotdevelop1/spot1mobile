@@ -137,7 +137,7 @@ https://templatemo.com/tm-573-eduwell
             <ul class="list-unstyled">
               <li><a href="{{asset('legales/ColaboracionConLaJusticia.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Colaboración con la Justicia</a></li>
               <li><a href="{!! URL::to('mapa')!!}" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Cobertura</a></li>
-              <li><a href="{{asset('avisoPrivacidad/AvisoDePrivacidadSpot1mobile.pdf')}}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
+              <li><a href="{!! URL::to('aviso-privacidad')!!}" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Aviso de Privacidad</a></li>
               <li><a href="" target="_blank" class="py-2 d-block text-black style-text w600"><i class="fa-solid fa-arrow-right p-2"></i>Terminos y Condiciones</a></li>
             </ul>
           </div>

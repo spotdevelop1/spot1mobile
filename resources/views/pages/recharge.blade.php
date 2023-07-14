@@ -256,7 +256,7 @@
         },
         success: function(data){
           swal.close()
-          // console.log(data); return false;
+          console.log("DATA: ",data);
 
           if(data.responseSubscriber){
             let status = data.responseSubscriber.status.subStatus;
@@ -265,6 +265,12 @@
               $('#tipoServicioInput').val(tipoServicio);
               $('#montoRecargaInput').val(montoRecarga);
               $('#formPago').submit();
+            } else if(status == "Barring (B1W) (Notified by client)"){
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Número ' + numeroSinEspacio + ' se encuentra suspendido!',
+                  text: 'Se suspendio debido a que la SIM se ingresó en un dispositivo no compatible.',
+                })
             }
           }else if(data.errorCode){
             let errorCode = data.errorCode;

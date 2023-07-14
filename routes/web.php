@@ -41,6 +41,10 @@ Route::get('/consult-imei', function(){
     return View::make('pages.imei');
 });
 
+Route::get('/aviso-privacidad', function(){
+    return View::make('pages.avisoPrivacidad');
+});
+
 
 Route::post('/recargas', 'RechargeController@recharge')->name('recharges');
 

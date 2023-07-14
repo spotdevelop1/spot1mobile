@@ -639,7 +639,7 @@
                   <div class="price  d-flex flex-row">
                       <div class="col-sm tarjeta-paquete">
                         <h3 class="texto-principalPlan2 style-text w500 text-center style-text w900 ">MEGAS</h3>
-                        <h3 class="texto-secundarioPlan2 style-text w500 text-center style-text W700">por <span class="style-text w900 ">7 DÍAS</span> </h3>
+                        <h3 class="texto-secundarioPlan2 style-text w500 text-center style-text W700">por <span class="style-text w900 ">30 DÍAS</span> </h3>
                       </div>
                   </div>
     
@@ -1114,7 +1114,7 @@
   <section class="m-informacion">
     <div class="d-flex justify-content-lg-center">
       <div class="p-2">
-        <a class="h6 h7 text-uppercase nav-informacion style-text w600" href="{{asset('avisoPrivacidad/AvisoDePrivacidadSpot1mobile.pdf')}}" target="_blank">Aviso de privacidad/</a>
+        <a class="h6 h7 text-uppercase nav-informacion style-text w600" href="{!! URL::to('aviso-privacidad')!!}" target="_blank">Aviso de privacidad/</a>
       </div>
       <div class="p-2">
         <a class="h6 h7 text-uppercase nav-informacion style-text w600">Terminos y condiciones/</a>

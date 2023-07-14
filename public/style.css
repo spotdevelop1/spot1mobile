@@ -1494,6 +1494,21 @@ button.close {
   font-size: 1rem;
   padding: 0.5rem;
 }
+.font-1_5{
+  font-size: 1.5rem!important;
+}
+.font-1_2{
+  font-size: 1.2rem!important;
+}
+
+.p-lds{
+  padding: 0rem 11rem 0rem 17rem;
+  text-align: justify!important;
+}
+
+.texto-n3{
+  margin-bottom: -3rem;
+}
 
 /*## ESTILOS DE LALO FIN##*/
 
